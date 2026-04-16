@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useRef } from 'react';
 import type { Question } from '../data/types';
 import { shuffle } from '../utils/helpers';
 import QuizCard from '../components/QuizCard';
@@ -19,7 +19,11 @@ export default function DrillPlayPage({
   onFinish,
   onBack,
 }: Props) {
-  const shuffled = useMemo(() => shuffle(questions), [questions]);
+  const shuffledRef = useRef<Question[] | null>(null);
+  if (shuffledRef.current === null || shuffledRef.current.length !== questions.length) {
+    shuffledRef.current = shuffle([...questions]);
+  }
+  const shuffled = shuffledRef.current;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
@@ -89,6 +93,7 @@ export default function DrillPlayPage({
                   setAnswered(false);
                   setResults(null);
                   setCorrectCount(0);
+                  shuffledRef.current = shuffle([...questions]);
                 }}
                 className="px-6 py-3 rounded-lg bg-gradient-to-r from-violet-500 to-indigo-500 text-white hover:scale-105 transition-transform"
               >
