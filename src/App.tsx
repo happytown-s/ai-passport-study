@@ -11,6 +11,7 @@ import ExamPage from './pages/ExamPage';
 import ExamPlayPage from './pages/ExamPlayPage';
 import ExamResultPage from './pages/ExamResultPage';
 import ReviewPage from './pages/ReviewPage';
+import TermsPage from './pages/TermsPage';
 
 type Page =
   | 'home'
@@ -20,7 +21,8 @@ type Page =
   | 'exam-play'
   | 'exam-result'
   | 'review'
-  | 'review-play';
+  | 'review-play'
+  | 'terms';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -211,6 +213,16 @@ export default function App() {
           wrongQuestionIds={getWrongQuestions()}
           onRetry={handleRetryReview}
           onBack={() => navigate('home')}
+        />
+      )}
+
+      {currentPage === 'terms' && (
+        <TermsPage
+          onBack={() => navigate('home')}
+          onStartDrillFromTerm={(ids) => {
+            setReviewQuestionIds(ids);
+            navigate('review-play');
+          }}
         />
       )}
 

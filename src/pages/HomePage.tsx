@@ -93,6 +93,23 @@ export default function HomePage({
               </div>
             </div>
           </button>
+
+          <button
+            onClick={() => onNavigate('terms')}
+            className="w-full bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-left hover:scale-[1.02] transition-transform group"
+          >
+            <div className="flex items-center gap-4">
+              <div className="text-3xl">📖</div>
+              <div>
+                <h2 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+                  用語集
+                </h2>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  重要用語をチェック・関連問題にジャンプ
+                </p>
+              </div>
+            </div>
+          </button>
         </div>
       </div>
     </div>
