@@ -2,7 +2,7 @@ import { useState, useCallback, useMemo } from 'react';
 import type { Question, ExamScore } from './data/types';
 import { allQuestions } from './data/questions';
 import { useStorage } from './hooks/useStorage';
-import { pickFromCategories } from './utils/helpers';
+import { pickFromCategories, shuffle } from './utils/helpers';
 
 import HomePage from './pages/HomePage';
 import DrillSelectPage from './pages/DrillSelectPage';
@@ -22,7 +22,8 @@ type Page =
   | 'exam-result'
   | 'review'
   | 'review-play'
-  | 'terms';
+  | 'terms'
+  | 'terms-drill';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -32,6 +33,7 @@ export default function App() {
   const [examTimeSpent, setExamTimeSpent] = useState(0);
   const [examStartKey, setExamStartKey] = useState(0);
   const [reviewQuestionIds, setReviewQuestionIds] = useState<number[]>([]);
+  const [termsQuestionIds, setTermsQuestionIds] = useState<number[]>([]);
 
   const {
     answerHistory,
@@ -103,6 +105,11 @@ export default function App() {
   const handleRetryReview = useCallback((ids: number[]) => {
     setReviewQuestionIds(ids);
     navigate('review-play');
+  }, [navigate]);
+
+  const handleTermsDrill = useCallback((ids: number[]) => {
+    setTermsQuestionIds(ids);
+    navigate('terms-drill');
   }, [navigate]);
 
   const handleDrillFinish = useCallback(
@@ -219,10 +226,24 @@ export default function App() {
       {currentPage === 'terms' && (
         <TermsPage
           onBack={() => navigate('home')}
-          onStartDrillFromTerm={(ids) => {
-            setReviewQuestionIds(ids);
-            navigate('review-play');
-          }}
+          onStartDrill={handleTermsDrill}
+        />
+      )}
+
+      {currentPage === 'terms-drill' && (
+        <DrillPlayPage
+          key={`terms-${termsQuestionIds.join(',')}`}
+          questions={
+            termsQuestionIds.length > 0
+              ? shuffle(
+                  allQuestions.filter((q) => termsQuestionIds.includes(q.id)),
+                )
+              : []
+          }
+          categoryLabel="用語から出題"
+          recordAnswer={recordAnswer}
+          onFinish={handleDrillFinish}
+          onBack={() => navigate('terms')}
         />
       )}
 
