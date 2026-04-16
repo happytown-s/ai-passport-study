@@ -2,7 +2,7 @@ import { useState, useCallback, useMemo } from 'react';
 import type { Question, ExamScore } from './data/types';
 import { allQuestions } from './data/questions';
 import { useStorage } from './hooks/useStorage';
-import { shuffle, pickFromCategories } from './utils/helpers';
+import { pickFromCategories } from './utils/helpers';
 
 import HomePage from './pages/HomePage';
 import DrillSelectPage from './pages/DrillSelectPage';
@@ -153,7 +153,7 @@ export default function App() {
 
       {currentPage === 'drill-play' && (
         <DrillPlayPage
-          key={`${drillCategory}-${Date.now()}`}
+          key={`drill-${drillCategory ?? 'all'}`}
           questions={drillQuestions}
           categoryLabel={
             drillCategory
@@ -219,9 +219,7 @@ export default function App() {
           key={`review-${reviewQuestionIds.join(',')}`}
           questions={
             reviewQuestionIds.length > 0
-              ? shuffle(
-                  allQuestions.filter((q) => reviewQuestionIds.includes(q.id)),
-                )
+              ? allQuestions.filter((q) => reviewQuestionIds.includes(q.id))
               : []
           }
           categoryLabel="復習"
