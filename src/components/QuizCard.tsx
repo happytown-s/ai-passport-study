@@ -42,13 +42,13 @@ export default function QuizCard({ question, selectedAnswer, onAnswer, answered 
             if (i === correctShuffledIndex) {
               btnClass +=
                 'border-green-500 bg-green-50 dark:bg-green-900/30 text-green-800 dark:text-green-200';
-            } else if (selectedAnswer === i) {
+            } else if (selectedShuffledIndex === i) {
               btnClass +=
                 'border-red-500 bg-red-50 dark:bg-red-900/30 text-red-800 dark:text-red-200';
             } else {
               btnClass += 'border-gray-200 dark:border-gray-600 text-gray-500 dark:text-gray-500';
             }
-          } else if (selectedAnswer === i) {
+          } else if (selectedShuffledIndex === i) {
             btnClass +=
               'border-violet-500 bg-violet-50 dark:bg-violet-900/30 text-violet-800 dark:text-violet-200';
           } else {
