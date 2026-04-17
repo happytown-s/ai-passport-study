@@ -20,6 +20,10 @@ export default function QuizCard({ question, selectedAnswer, onAnswer, answered 
   }, [question.options]);
 
   const correctShuffledIndex = shuffledOptions.findIndex((item) => item.option.correct);
+  // Map originalIndex -> shuffledIndex for highlight
+  const selectedShuffledIndex = selectedAnswer !== null
+    ? shuffledOptions.findIndex((item) => item.originalIndex === selectedAnswer)
+    : null;
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
@@ -65,7 +69,7 @@ export default function QuizCard({ question, selectedAnswer, onAnswer, answered 
               {answered && i === correctShuffledIndex && (
                 <span className="ml-2">✅</span>
               )}
-              {answered && selectedAnswer === i && i !== correctShuffledIndex && (
+              {answered && selectedShuffledIndex === i && i !== correctShuffledIndex && (
                 <span className="ml-2">❌</span>
               )}
             </button>
