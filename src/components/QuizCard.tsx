@@ -1,4 +1,6 @@
+import { useMemo } from 'react';
 import type { Question } from '../data/types';
+import { shuffle } from '../utils/helpers';
 
 interface Props {
   question: Question;
@@ -8,6 +10,17 @@ interface Props {
 }
 
 export default function QuizCard({ question, selectedAnswer, onAnswer, answered }: Props) {
+  const shuffledOptions = useMemo(() => {
+    const indices = question.options.map((_, i) => i);
+    const shuffled = shuffle(indices);
+    return shuffled.map((originalIdx) => ({
+      option: question.options[originalIdx],
+      originalIndex: originalIdx,
+    }));
+  }, [question.options]);
+
+  const correctShuffledIndex = shuffledOptions.findIndex((item) => item.option.correct);
+
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
       <div className="mb-2 text-xs font-medium text-violet-600 dark:text-violet-400">
@@ -17,11 +30,12 @@ export default function QuizCard({ question, selectedAnswer, onAnswer, answered 
         Q{question.id}. {question.question}
       </h2>
       <div className="space-y-3">
-        {question.options.map((opt, i) => {
+        {shuffledOptions.map((item, i) => {
+          const opt = item.option;
           let btnClass =
             'w-full text-left px-4 py-3 rounded-lg border-2 transition-all duration-200 ';
           if (answered) {
-            if (opt.correct) {
+            if (i === correctShuffledIndex) {
               btnClass +=
                 'border-green-500 bg-green-50 dark:bg-green-900/30 text-green-800 dark:text-green-200';
             } else if (selectedAnswer === i) {
@@ -40,7 +54,7 @@ export default function QuizCard({ question, selectedAnswer, onAnswer, answered 
           return (
             <button
               key={i}
-              onClick={() => !answered && onAnswer(i)}
+              onClick={() => !answered && onAnswer(item.originalIndex)}
               disabled={answered}
               className={btnClass}
             >
@@ -48,10 +62,10 @@ export default function QuizCard({ question, selectedAnswer, onAnswer, answered 
                 {String.fromCharCode(65 + i)}.
               </span>
               {opt.text}
-              {answered && opt.correct && (
+              {answered && i === correctShuffledIndex && (
                 <span className="ml-2">✅</span>
               )}
-              {answered && selectedAnswer === i && !opt.correct && (
+              {answered && selectedAnswer === i && i !== correctShuffledIndex && (
                 <span className="ml-2">❌</span>
               )}
             </button>
