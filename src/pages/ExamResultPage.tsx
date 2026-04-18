@@ -1,11 +1,12 @@
 import { useMemo } from 'react';
-import type { Question } from '../data/types';
+import type { Question } from '../core/types';
 import { categories } from '../data/questions';
 
 interface Props {
   questions: Question[];
   answers: Map<number, number>;
   timeSpent: number;
+  passLine: number;
   onReview: () => void;
   onRetry: () => void;
   onHome: () => void;
@@ -15,6 +16,7 @@ export default function ExamResultPage({
   questions,
   answers,
   timeSpent,
+  passLine,
   onReview,
   onRetry,
   onHome,
@@ -63,7 +65,7 @@ export default function ExamResultPage({
 
   const totalQuestions = questions.length;
   const rate = Math.round((results.totalCorrect / totalQuestions) * 100);
-  const passed = rate >= 70;
+  const passed = rate >= passLine;
   const minutes = Math.floor(timeSpent / 60);
   const seconds = timeSpent % 60;
 
@@ -86,7 +88,7 @@ export default function ExamResultPage({
           <p className="text-sm text-gray-400">所要時間: {minutes}分{seconds}秒</p>
           {passed && (
             <div className="mt-4 inline-block px-4 py-2 bg-green-100 dark:bg-green-900/30 rounded-full text-green-700 dark:text-green-400 font-medium">
-              ✅ 合格（70%以上）
+              ✅ 合格（{passLine}%以上）
             </div>
           )}
         </div>
@@ -130,7 +132,7 @@ export default function ExamResultPage({
         </div>
 
         {/* Weak categories */}
-        {results.weakCategories.slice(0, 3).some((c) => c.rate < 70) && (
+        {results.weakCategories.slice(0, 3).some((c) => c.rate < passLine) && (
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-6">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
               🎯 苦手分野 TOP3

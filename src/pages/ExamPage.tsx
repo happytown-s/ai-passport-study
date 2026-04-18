@@ -1,9 +1,14 @@
+import type { QuizConfig } from '../core/types';
+
 interface Props {
+  config: QuizConfig;
   onStart: () => void;
   onBack: () => void;
 }
 
-export default function ExamPage({ onStart, onBack }: Props) {
+export default function ExamPage({ config, onStart, onBack }: Props) {
+  const passCount = Math.ceil(config.examQuestions * config.passLine / 100);
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
       <div className="max-w-2xl mx-auto px-4 py-8">
@@ -22,21 +27,21 @@ export default function ExamPage({ onStart, onBack }: Props) {
               <span className="text-xl">📋</span>
               <div>
                 <p className="font-medium text-gray-900 dark:text-white">出題数</p>
-                <p>全分野から60問ランダム出題</p>
+                <p>全分野から{config.examQuestions}問ランダム出題</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <span className="text-xl">⏱️</span>
               <div>
                 <p className="font-medium text-gray-900 dark:text-white">制限時間</p>
-                <p>60分</p>
+                <p>{config.examTimeLimit}分</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <span className="text-xl">✅</span>
               <div>
                 <p className="font-medium text-gray-900 dark:text-white">合格基準</p>
-                <p>正答率70%以上（42問以上正解）</p>
+                <p>正答率{config.passLine}%以上（{passCount}問以上正解）</p>
               </div>
             </div>
             <div className="flex items-start gap-3">

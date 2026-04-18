@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { Question } from '../data/types';
+import type { Question } from '../core/types';
 import { categories } from '../data/questions';
 
 interface Props {

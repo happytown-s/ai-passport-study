@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import type { Question } from '../data/types';
+import type { Question } from '../core/types';
 import { shuffle } from '../utils/helpers';
 
 interface Props {

@@ -1,7 +1,8 @@
 import { useState, useCallback, useMemo } from 'react';
-import type { Question, ExamScore } from './data/types';
+import type { Question, ExamScore } from './core/types';
 import { allQuestions } from './data/questions';
-import { useStorage } from './hooks/useStorage';
+import { quizConfig } from './data/config';
+import { useStorage } from './core/useStorage';
 import { pickFromCategories, shuffle } from './utils/helpers';
 
 import HomePage from './pages/HomePage';
@@ -66,8 +67,9 @@ export default function App() {
   }, [navigate]);
 
   const handleStartExam = useCallback(() => {
-    const questions = pickFromCategories(allQuestions, 9); // 7×9=63 → take 60
-    setExamQuestions(questions.slice(0, 60));
+    const perCategory = Math.ceil(quizConfig.examQuestions / quizConfig.categories.length);
+    const questions = pickFromCategories(allQuestions, perCategory);
+    setExamQuestions(questions.slice(0, quizConfig.examQuestions));
     setExamAnswers(new Map());
     setExamTimeSpent(0);
     setExamStartKey((k) => k + 1);
@@ -131,7 +133,7 @@ export default function App() {
 
   const handleExamTimeUp = useCallback(
     (answers: Map<number, number>) => {
-      const timeUsed = 60 * 60; // Full time expired
+      const timeUsed = quizConfig.examTimeLimit * 60; // Full time expired
       handleExamFinish(answers, timeUsed);
     },
     [handleExamFinish],
@@ -170,6 +172,7 @@ export default function App() {
                   ?.categoryLabel ?? drillCategory)
               : '全分野'
           }
+          passLine={quizConfig.passLine}
           recordAnswer={recordAnswer}
           onFinish={handleDrillFinish}
           onBack={() => navigate('drill')}
@@ -178,6 +181,7 @@ export default function App() {
 
       {currentPage === 'exam' && (
         <ExamPage
+          config={quizConfig}
           onStart={handleStartExam}
           onBack={() => navigate('home')}
         />
@@ -187,6 +191,7 @@ export default function App() {
         <ExamPlayPage
           key={examStartKey}
           questions={examQuestions}
+          timeLimit={quizConfig.examTimeLimit}
           onTimeUp={handleExamTimeUp}
           onSubmit={handleExamSubmit}
           onBack={() => navigate('home')}
@@ -198,6 +203,7 @@ export default function App() {
           questions={examQuestions}
           answers={examAnswers}
           timeSpent={examTimeSpent}
+          passLine={quizConfig.passLine}
           onReview={() => {
             const wrongIds: number[] = [];
             for (const q of examQuestions) {
@@ -241,6 +247,7 @@ export default function App() {
               : []
           }
           categoryLabel="用語から出題"
+          passLine={quizConfig.passLine}
           recordAnswer={recordAnswer}
           onFinish={handleDrillFinish}
           onBack={() => navigate('terms')}
@@ -256,6 +263,7 @@ export default function App() {
               : []
           }
           categoryLabel="復習"
+          passLine={quizConfig.passLine}
           recordAnswer={recordAnswer}
           onFinish={handleDrillFinish}
           onBack={() => navigate('review')}

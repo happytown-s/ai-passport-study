@@ -1,4 +1,4 @@
-import type { AnswerRecord, ExamScore } from '../data/types';
+import type { AnswerRecord, ExamScore } from '../core/types';
 import { getOverallStats } from '../utils/helpers';
 
 interface Props {

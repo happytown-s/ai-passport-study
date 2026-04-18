@@ -1,17 +1,18 @@
 import { useState, useEffect, useCallback } from 'react';
-import type { Question } from '../data/types';
+import type { Question } from '../core/types';
 import { formatTime } from '../utils/helpers';
 import QuizCard from '../components/QuizCard';
 
 interface Props {
   questions: Question[];
+  timeLimit: number;
   onTimeUp: (answers: Map<number, number>) => void;
   onSubmit: (answers: Map<number, number>) => void;
   onBack: () => void;
 }
 
-export default function ExamPlayPage({ questions, onTimeUp, onSubmit, onBack }: Props) {
-  const [timeLeft, setTimeLeft] = useState(60 * 60);
+export default function ExamPlayPage({ questions, timeLimit, onTimeUp, onSubmit, onBack }: Props) {
+  const [timeLeft, setTimeLeft] = useState(timeLimit * 60);
   const [answers, setAnswers] = useState<Map<number, number>>(new Map());
   const [currentIndex, setCurrentIndex] = useState(0);
   const [confirmedSubmit, setConfirmedSubmit] = useState(false);

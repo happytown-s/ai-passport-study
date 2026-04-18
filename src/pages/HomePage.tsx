@@ -1,3 +1,4 @@
+import { quizConfig } from '../data/config';
 import StatsSummary from '../components/StatsSummary';
 import DarkModeToggle from '../components/DarkModeToggle';
 
@@ -26,10 +27,10 @@ export default function HomePage({
       <div className="max-w-2xl mx-auto px-4 py-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
-            AIパスポートStudy
+            {quizConfig.title}Study
           </h1>
           <p className="text-gray-500 dark:text-gray-400 mt-2">
-            生成AIパスポート試験対策アプリ
+            {quizConfig.description}
           </p>
         </div>
 
@@ -71,7 +72,7 @@ export default function HomePage({
                   模試モード
                 </h2>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  60問・60分の本番シミュレーション
+                  {quizConfig.examQuestions}問・{quizConfig.examTimeLimit}分の本番シミュレーション
                 </p>
               </div>
             </div>

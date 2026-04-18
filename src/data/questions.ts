@@ -1,4 +1,5 @@
-import type { Question } from './types';
+import type { Question } from '../core/types';
+import { quizConfig } from './config';
 import { aiBasicsQuestions } from './ai-basics';
 import { mlBasicsQuestions } from './ml-basics';
 import { generativeAiQuestions } from './generative-ai';
@@ -17,12 +18,10 @@ export const allQuestions: Question[] = [
   ...businessQuestions,
 ];
 
-export const categories: { id: string; label: string; icon: string }[] = [
-  { id: 'ai_basics', label: 'AI基礎知識', icon: '🧠' },
-  { id: 'ml_basics', label: '機械学習基礎', icon: '📊' },
-  { id: 'generative_ai', label: '生成AIの仕組み', icon: '🤖' },
-  { id: 'prompt_engineering', label: 'プロンプトエンジニアリング', icon: '💬' },
-  { id: 'ai_risks', label: 'AIのリスク・倫理', icon: '⚠️' },
-  { id: 'legal', label: '著作権・法規制', icon: '⚖️' },
-  { id: 'business', label: 'ビジネス活用', icon: '💼' },
-];
+export const categories = quizConfig.categories.map((cat) => ({
+  id: cat.id,
+  label: cat.label,
+  icon: cat.icon,
+}));
+
+export { quizConfig };

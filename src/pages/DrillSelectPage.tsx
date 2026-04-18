@@ -1,6 +1,6 @@
 import { categories } from '../data/questions';
 import { getCategoryProgress } from '../utils/helpers';
-import type { Question, AnswerRecord } from '../data/types';
+import type { Question, AnswerRecord } from '../core/types';
 
 interface Props {
   allQuestions: Question[];
@@ -37,7 +37,7 @@ export default function DrillSelectPage({
             <div>
               <h2 className="text-lg font-bold">全分野</h2>
               <p className="text-sm text-violet-200">
-                全210問からランダム出題
+                全{allQuestions.length}問からランダム出題
               </p>
             </div>
           </div>

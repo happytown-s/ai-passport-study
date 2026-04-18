@@ -1,4 +1,4 @@
-import type { Question, AnswerRecord } from '../data/types';
+import type { Question, AnswerRecord } from '../core/types';
 import { categories } from '../data/questions';
 
 export function shuffle<T>(array: T[]): T[] {

@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import type { Question } from '../data/types';
+import type { Question } from '../core/types';
 import { shuffle } from '../utils/helpers';
 import QuizCard from '../components/QuizCard';
 import ProgressBar from '../components/ProgressBar';
@@ -7,6 +7,7 @@ import ProgressBar from '../components/ProgressBar';
 interface Props {
   questions: Question[];
   categoryLabel: string;
+  passLine: number;
   recordAnswer: (questionId: number, isCorrect: boolean) => void;
   onFinish: (results: { correct: number; total: number }) => void;
   onBack: () => void;
@@ -15,6 +16,7 @@ interface Props {
 export default function DrillPlayPage({
   questions,
   categoryLabel,
+  passLine,
   recordAnswer,
   onFinish,
   onBack,
@@ -57,7 +59,7 @@ export default function DrillPlayPage({
 
   if (results) {
     const rate = Math.round((results.correct / results.total) * 100);
-    const passed = rate >= 70;
+    const passed = rate >= passLine;
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
         <div className="max-w-2xl mx-auto px-4 py-8">
@@ -76,7 +78,7 @@ export default function DrillPlayPage({
             </p>
             {passed && (
               <p className="text-green-600 dark:text-green-400 mb-4 font-medium">
-                🎯 合格目標クリア！（70%以上）
+                🎯 合格目標クリア！（{passLine}%以上）
               </p>
             )}
             <div className="flex gap-3 justify-center">
