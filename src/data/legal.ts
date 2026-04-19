@@ -103,7 +103,7 @@ export const legalQuestions: Question[] = [
       { text: '気象予報の精度向上AI', correct: false },
       { text: '文章の文法・誤字校正ツール', correct: false },
     ],
-    explanation: 'EU AI Actでは、人間の行動を監視して社会的信用を評価するソーシャルスコアリングや、潜意识的操作等を「不可接受リスク」としてEU域内での提供・使用を原則禁止しています。',
+    explanation: 'EU AI Actでは、人間の行動を監視して社会的信用を評価するソーシャルスコアリングや、潜意識的操作（サブリミナル操作など）を「不可接受リスク」としてEU域内での提供・使用を原則禁止しています。',
   },
   {
     id: 159,
