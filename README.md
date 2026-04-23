@@ -1,73 +1,63 @@
-# React + TypeScript + Vite
+# AI Passport Study
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> AIパスポート試験対策 Webアプリ。ドリル、模試、用語集を網羅した包括的な学習ツール。
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- ドリルモード: カテゴリ別に10問/20問/全問をランダム出題
+- 模擬試験: 60問・60分の本番シミュレーション（合格ライン70%）
+- 間違い復習: 間違えた問題を自動記録し、重点的に復習
+- 用語集: 105語のAI関連用語をカテゴリ別に閲覧（読み方・関連語・関連問題へのリンク付き）
+- ダークモード対応
+- 進捗のローカルストレージ保存
 
-## React Compiler
+## Contents
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Quiz (AIパスポート試験)
 
-## Expanding the ESLint configuration
+全210問、7カテゴリ:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| カテゴリ | 問題数 |
+|---|---|
+| AI基礎知識 | 30問 |
+| 機械学習基礎 | 30問 |
+| 生成AIの仕組み | 30問 |
+| プロンプトエンジニアリング | 30問 |
+| AIのリスク・倫理 | 30問 |
+| 著作権・法規制 | 30問 |
+| ビジネス活用 | 30問 |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 用語集
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+105語を6カテゴリで構成:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| カテゴリ | 語数 |
+|---|---|
+| AI基礎知識 | 15語 |
+| 機械学習基礎 | 15語 |
+| 生成AIの仕組み | 15語 |
+| プロンプトエンジニアリング | 15語 |
+| AIのリスク・倫理 | 15語 |
+| 著作権・法規制 | 15語 |
+| ビジネス活用 | 15語 |
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React + TypeScript + Vite
+- Tailwind CSS v4
+- PWA Support
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Usage
+
+1. Clone the repository
+2. `npm install`
+3. `npm run dev`
+4. Open http://localhost:5173
+
+## Deployment
+
+- Deploy to Vercel: Import repository -> Deploy
+
+## License
+
+MIT
