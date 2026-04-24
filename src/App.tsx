@@ -11,6 +11,7 @@ import DrillPlayPage from './pages/DrillPlayPage';
 import ExamPage from './pages/ExamPage';
 import ExamPlayPage from './pages/ExamPlayPage';
 import ExamResultPage from './pages/ExamResultPage';
+import ExamHistoryPage from './pages/ExamHistoryPage';
 import ReviewPage from './pages/ReviewPage';
 import TermsPage from './pages/TermsPage';
 import TextbookSelect from './components/TextbookSelect';
@@ -30,6 +31,7 @@ type Page =
   | 'exam'
   | 'exam-play'
   | 'exam-result'
+  | 'exam-history'
   | 'review'
   | 'review-play'
   | 'terms'
@@ -69,6 +71,7 @@ export default function App() {
     recordExamScore,
     toggleDarkMode,
     getWrongQuestions,
+    clearHistory,
   } = useStorage();
 
   const wrongCount = useMemo(() => {
@@ -109,12 +112,19 @@ export default function App() {
       setExamTimeSpent(timeUsed);
 
       let correctCount = 0;
+      const wrongIds: number[] = [];
+      const categoryScores: Record<string, { correct: number; total: number }> = {};
+
       for (const q of examQuestions) {
+        if (!categoryScores[q.category]) categoryScores[q.category] = { correct: 0, total: 0 };
+        categoryScores[q.category].total++;
         const userAnswer = answers.get(q.id);
         if (userAnswer !== undefined && q.options[userAnswer]?.correct) {
           correctCount++;
+          categoryScores[q.category].correct++;
           recordAnswer(q.id, true);
         } else {
+          wrongIds.push(q.id);
           recordAnswer(q.id, false);
         }
       }
@@ -124,6 +134,8 @@ export default function App() {
         correctCount,
         date: new Date().toISOString(),
         timeSpent: timeUsed,
+        wrongIds,
+        categoryScores,
       };
       recordExamScore(score);
       navigate('exam-result');
@@ -250,6 +262,18 @@ export default function App() {
           }}
           onRetry={handleStartExam}
           onHome={() => navigate('home')}
+        />
+      )}
+
+      {currentPage === 'exam-history' && (
+        <ExamHistoryPage
+          examScores={examScores}
+          onRetryWrong={(wrongIds) => {
+            setReviewQuestionIds(wrongIds);
+            navigate('review-play');
+          }}
+          onBack={() => navigate('home')}
+          onClear={() => clearHistory()}
         />
       )}
 

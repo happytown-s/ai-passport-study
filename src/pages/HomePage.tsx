@@ -79,6 +79,23 @@ export default function HomePage({
           </button>
 
           <button
+            onClick={() => onNavigate('exam-history')}
+            className="w-full bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-left hover:scale-[1.02] transition-transform group"
+          >
+            <div className="flex items-center gap-4">
+              <div className="text-3xl">📊</div>
+              <div>
+                <h2 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+                  Exam History
+                </h2>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  Score trend & weak point analysis
+                </p>
+              </div>
+            </div>
+          </button>
+
+          <button
             onClick={() => onNavigate('review')}
             className="w-full bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-left hover:scale-[1.02] transition-transform group"
           >

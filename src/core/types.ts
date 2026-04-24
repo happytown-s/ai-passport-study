@@ -23,6 +23,8 @@ export interface ExamScore {
   correctCount: number;
   date: string;
   timeSpent: number;
+  wrongIds?: number[];
+  categoryScores?: Record<string, { correct: number; total: number }>;
 }
 
 export type CategoryId = 'ai_basics' | 'ml_basics' | 'generative_ai' | 'prompt_engineering' | 'ai_risks' | 'legal' | 'business';
