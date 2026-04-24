@@ -13,6 +13,15 @@ import ExamPlayPage from './pages/ExamPlayPage';
 import ExamResultPage from './pages/ExamResultPage';
 import ReviewPage from './pages/ReviewPage';
 import TermsPage from './pages/TermsPage';
+import TextbookSelect from './components/TextbookSelect';
+import TextbookView from './components/TextbookView';
+import textbookAiBasics from './data/textbook-ai-basics.json';
+import textbookMlBasics from './data/textbook-ml-basics.json';
+import textbookGenerativeAi from './data/textbook-generative-ai.json';
+import textbookPromptEng from './data/textbook-prompt-engineering.json';
+import textbookAiRisks from './data/textbook-ai-risks.json';
+import textbookLegal from './data/textbook-legal.json';
+import textbookBusiness from './data/textbook-business.json';
 
 type Page =
   | 'home'
@@ -24,11 +33,26 @@ type Page =
   | 'review'
   | 'review-play'
   | 'terms'
-  | 'terms-drill';
+  | 'terms-drill'
+  | 'textbook-select'
+  | 'textbook-view';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
   const [drillCategory, setDrillCategory] = useState<string | null>(null);
+  const [textbookCategory, setTextbookCategory] = useState<string | null>(null);
+  const [textbookQuestionIds, setTextbookQuestionIds] = useState<number[]>([]);
+  const [textbookSearchKeyword, setTextbookSearchKeyword] = useState<string>('');
+
+  const textbookMap: Record<string, { title: string; topics: typeof textbookAiBasics }> = {
+    ai_basics: { title: 'AI基礎知識', topics: textbookAiBasics },
+    ml_basics: { title: '機械学習基礎', topics: textbookMlBasics },
+    generative_ai: { title: '生成AIの仕組み', topics: textbookGenerativeAi },
+    prompt_engineering: { title: 'プロンプトエンジニアリング', topics: textbookPromptEng },
+    ai_risks: { title: 'AIのリスク・倫理', topics: textbookAiRisks },
+    legal: { title: '著作権・法規制', topics: textbookLegal },
+    business: { title: 'ビジネス活用', topics: textbookBusiness },
+  };
   const [examQuestions, setExamQuestions] = useState<Question[]>([]);
   const [examAnswers, setExamAnswers] = useState<Map<number, number>>(new Map());
   const [examTimeSpent, setExamTimeSpent] = useState(0);
@@ -57,9 +81,12 @@ export default function App() {
   }, []);
 
   const drillQuestions = useMemo(() => {
+    if (textbookQuestionIds.length > 0) {
+      return allQuestions.filter((q) => textbookQuestionIds.includes(q.id));
+    }
     if (!drillCategory) return allQuestions;
     return allQuestions.filter((q) => q.category === drillCategory);
-  }, [drillCategory]);
+  }, [drillCategory, textbookQuestionIds]);
 
   const handleSelectCategory = useCallback((catId: string | null) => {
     setDrillCategory(catId);
@@ -164,10 +191,12 @@ export default function App() {
 
       {currentPage === 'drill-play' && (
         <DrillPlayPage
-          key={`drill-${drillCategory ?? 'all'}`}
+          key={`drill-${drillCategory ?? 'all'}-${textbookQuestionIds.join(',')}`}
           questions={drillQuestions}
           categoryLabel={
-            drillCategory
+            textbookQuestionIds.length > 0
+              ? 'Textbook Practice'
+              : drillCategory
               ? (allQuestions.find((q) => q.category === drillCategory)
                   ?.categoryLabel ?? drillCategory)
               : '全分野'
@@ -175,7 +204,11 @@ export default function App() {
           passLine={quizConfig.passLine}
           recordAnswer={recordAnswer}
           onFinish={handleDrillFinish}
-          onBack={() => navigate('drill')}
+          onBack={() => {
+            setTextbookQuestionIds([]);
+            if (textbookCategory) navigate('textbook-view');
+            else navigate('drill');
+          }}
         />
       )}
 
@@ -231,8 +264,13 @@ export default function App() {
 
       {currentPage === 'terms' && (
         <TermsPage
-          onBack={() => navigate('home')}
+          onBack={() => {
+            setTextbookSearchKeyword('');
+            if (textbookCategory) navigate('textbook-view');
+            else navigate('home');
+          }}
           onStartDrill={handleTermsDrill}
+          initialSearch={textbookSearchKeyword}
         />
       )}
 
@@ -267,6 +305,34 @@ export default function App() {
           recordAnswer={recordAnswer}
           onFinish={handleDrillFinish}
           onBack={() => navigate('review')}
+        />
+      )}
+
+      {currentPage === 'textbook-select' && (
+        <TextbookSelect
+          onSelect={(catId) => {
+            setTextbookCategory(catId);
+            navigate('textbook-view');
+          }}
+          onBack={() => navigate('home')}
+        />
+      )}
+
+      {currentPage === 'textbook-view' && textbookCategory && textbookMap[textbookCategory] && (
+        <TextbookView
+          title={textbookMap[textbookCategory].title}
+          category={textbookCategory}
+          topics={textbookMap[textbookCategory].topics}
+          onBack={() => navigate('textbook-select')}
+          onPractice={(questionIds) => {
+            setDrillCategory(null);
+            setTextbookQuestionIds(questionIds);
+            navigate('drill-play');
+          }}
+          onSearchKeyword={(keyword) => {
+            setTextbookSearchKeyword(keyword);
+            navigate('terms');
+          }}
         />
       )}
     </div>
