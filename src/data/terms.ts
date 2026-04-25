@@ -207,4 +207,18 @@ export const terms: Term[] = [
   { id: 181, term: 'Copilot', reading: 'こぱいろっと', category: 'generative_ai', categoryLabel: '生成AIの仕組み', definition: 'Microsoftが提供するAIアシスタント。Office製品群に統合されている。', relatedTermIds: [], relatedQuestionIds: [] },
   { id: 182, term: 'マルチエージェント', reading: 'まるちえーじぇんと', category: 'ai_basics', categoryLabel: 'AI基礎知識', definition: '複数のAIエージェントが協調してタスクを遂行する仕組み。', relatedTermIds: [174], relatedQuestionIds: [] },
   { id: 183, term: 'ナレッジマネジメント', reading: 'なれっじまねーじめんと', category: 'business', categoryLabel: 'ビジネス活用', definition: '組織の知識を体系的に管理・活用するプロセス。RAG活用の基盤となる。', relatedTermIds: [173], relatedQuestionIds: [] },
+  // --- 184-192: 追加用語 ---
+  { id: 184, term: '位置エンコーディング', reading: 'いちえんこーでぃんぐ', category: 'generative_ai', categoryLabel: '生成AIの仕組み', definition: 'Transformerで単語の順序情報を保持する仕組み。Self-Attentionは位置を区別できないため、位置情報を付加する必要がある。', relatedTermIds: [33, 34], relatedQuestionIds: [] },
+  { id: 185, term: 'スケーリング（Attention）', reading: 'すけーりんぐ', category: 'generative_ai', categoryLabel: '生成AIの仕組み', definition: 'Self-Attentionのスコアをsqrt(d_k)で除算し、勾配消失を防止する技術。安定した学習に不可欠。', relatedTermIds: [34], relatedQuestionIds: [] },
+  { id: 186, term: 'UL2R', reading: 'ゆーえるにあーる', category: 'generative_ai', categoryLabel: '生成AIの仕組み', definition: 'BERTとGPTの構造を融合し、文生成と文分類を統一的に扱う言語学習パラダイム。', relatedTermIds: [33], relatedQuestionIds: [] },
+  { id: 187, term: 'ASI（人工超知能）', reading: 'えーえすあい', category: 'ai_basics', categoryLabel: 'AI基礎知識', definition: '人間の知能をあらゆる領域で遥かに超える仮説上のAI。AGIの実現後に自己強化的な進歩で到達するとされる。', relatedTermIds: [5, 12, 110], relatedQuestionIds: [] },
+  { id: 188, term: 'ルールベースAI', reading: 'るーるべーすえーあい', category: 'ai_basics', categoryLabel: 'AI基礎知識', definition: 'あらかじめ定義されたルールに従って処理を行うAI。機械学習のようにデータから学習するのではなく、人間が明示的にルールを設計する。', relatedTermIds: [3, 11], relatedQuestionIds: [] },
+  { id: 189, term: '早期終了（Early Stopping）', reading: 'そうきしゅうりょう', category: 'ml_basics', categoryLabel: '機械学習基礎', definition: '検証データの精度が向上しなくなった時点で訓練を停止し、過学習を防ぐ手法。', relatedTermIds: [21, 127], relatedQuestionIds: [] },
+  { id: 190, term: 'Multi-Modalモデル', reading: 'まるちもーだるもでる', category: 'generative_ai', categoryLabel: '生成AIの仕組み', definition: 'テキスト・画像・音声など複数種類のデータを統合処理するAIモデル。GPT-4Vなどが代表例。', relatedTermIds: [43], relatedQuestionIds: [] },
+  { id: 191, term: 'VAE（変分自己符号化器）', reading: 'ぶいえーいー', category: 'generative_ai', categoryLabel: '生成AIの仕組み', definition: '潜在変数を用いてデータを圧縮・復元する生成モデル。エンコーダで潜在空間に圧縮し、デコーダで復元する。', relatedTermIds: [37], relatedQuestionIds: [] },
+  { id: 192, term: 'Diffusionモデル', reading: 'でぃふゅーじょんもでる', category: 'generative_ai', categoryLabel: '生成AIの仕組み', definition: 'ノイズを段階的に除去してデータを生成するモデル。現在の画像生成AIの主流技術。', relatedTermIds: [35], relatedQuestionIds: [] },
+  // --- 193-196: PART2 追加用語 ---
+  { id: 193, term: 'AI社会原則', reading: 'えーあいしゃかいげんそく', category: 'legal', categoryLabel: '著作権・法規制', definition: 'AI社会で守るべき基本理念。プライバシー保護、公平性、アカウンタビリティ（説明責任）、イノベーションの推進が含まれる。イノベーションの否定や技術の独占は含まれない。', relatedTermIds: [], relatedQuestionIds: [] },
+  { id: 194, term: '知的財産権', reading: 'ちてきざいさんけん', category: 'legal', categoryLabel: '著作権・法規制', definition: '人間の知的創造活動の成果を保護する権利。特許権・商標権・意匠権・著作権が含まれる。ブロックチェーンは技術仕組みであり知的財産権ではない。', relatedTermIds: [153], relatedQuestionIds: [] },
+  { id: 195, term: '情報リテラシー', reading: 'じょうほうりてらしー', category: 'ai_risks', categoryLabel: 'AIのリスク・倫理', definition: '情報を適切に扱う能力。セキュリティ・プライバシー・倫理の理解が含まれる。ソーシャルエンジニアリング攻撃への対策も関連する。', relatedTermIds: [], relatedQuestionIds: [] },
 ];

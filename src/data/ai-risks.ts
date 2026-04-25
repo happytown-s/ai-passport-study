@@ -417,4 +417,30 @@ export const aiRisksQuestions: Question[] = [
     ],
     explanation: 'AI事業者ガイドライン（第1.1版）は、AIの開発・提供・利用に関わる事業者が遵守すべき基本原則を定めた指針です。開発者・提供者・利用者の3つの主体に応じた責任が規定されています。',
   },
+  {
+    id: 218,
+    category: 'ai_risks',
+    categoryLabel: 'AIのリスク・倫理',
+    question: 'ディープフェイクで特に注意が必要な使用目的はどれか？',
+    options: [
+      { text: 'エンターテインメントコンテンツの制作', correct: false },
+      { text: '故意に人を欺く目的での使用', correct: true },
+      { text: '教育用シミュレーションの作成', correct: false },
+      { text: '映画の特殊効果の活用', correct: false },
+    ],
+    explanation: 'ディープフェイクの最も深刻なリスクは、故意に人を欺く目的での使用です。詐欺、誤情報拡散、なりすましなどの悪用が大きな社会問題となっています。GANやVAEなどの生成技術が基盤となっています。',
+  },
+  {
+    id: 219,
+    category: 'ai_risks',
+    categoryLabel: 'AIのリスク・倫理',
+    question: '生成AIの倫理的課題に該当しないものはどれか？',
+    options: [
+      { text: 'ハルシネーションによる誤情報の拡散', correct: false },
+      { text: '学習データのバイアスによる偏った出力', correct: false },
+      { text: 'プロンプト技術の発展による応答精度向上', correct: true },
+      { text: '個人情報の意図しない漏洩', correct: false },
+    ],
+    explanation: 'プロンプト技術の発展は技術的進歩であり、倫理的課題ではありません。ハルシネーション、バイアス、プライバシー侵害などが生成AIの倫理的課題として挙げられます。',
+  },
 ];

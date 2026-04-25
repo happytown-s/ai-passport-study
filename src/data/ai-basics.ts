@@ -417,4 +417,30 @@ export const aiBasicsQuestions: Question[] = [
     ],
     explanation: 'マルチエージェントシステムは、複数の自律的なAIエージェントがそれぞれの役割を分担し、協調して複雑なタスクを遂行する仕組みです。プロジェクト管理やシミュレーションなどで応用されています。',
   },
+  {
+    id: 216,
+    category: 'ai_basics',
+    categoryLabel: 'AI基礎知識',
+    question: 'AIの能力レベルで最も高いものはどれか？',
+    options: [
+      { text: 'AGI（汎用人工知能）', correct: false },
+      { text: 'ASI（人工超知能）', correct: true },
+      { text: 'ANI（特化型AI）', correct: false },
+      { text: 'Narrow AI（狭義AI）', correct: false },
+    ],
+    explanation: 'ASI（Artificial Superintelligence）は人間の知能をあらゆる領域で遥かに超える仮説上のAIであり、AGI（汎用人工知能）よりもさらに高い能力レベルとされています。',
+  },
+  {
+    id: 217,
+    category: 'ai_basics',
+    categoryLabel: 'AI基礎知識',
+    question: 'ルールベースAIの特徴として適切なものはどれか？',
+    options: [
+      { text: '大量のデータから自動的にパターンを学習する', correct: false },
+      { text: 'あらかじめ定義されたルールに基づいて処理する', correct: true },
+      { text: '環境との相互作用を通じて報酬を最大化する', correct: false },
+      { text: 'ニューラルネットワークの多層構造で特徴を抽出する', correct: false },
+    ],
+    explanation: 'ルールベースAIは、人間があらかじめ定義したルール（if-then形式など）に従って処理を行うAIです。機械学習のようにデータから学習するのではなく、明示的に設計されたルールに依存します。',
+  },
 ];

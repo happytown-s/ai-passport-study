@@ -404,4 +404,43 @@ export const legalQuestions: Question[] = [
     ],
     explanation: 'AI新法（人工知能関連技術の研究開発及び活用の推進に関する法律）は、AIの利用を規制するものではなく、研究開発と活用を推進する法律です。AI戦略本部の設置や人材育成が柱となっています。',
   },
+  {
+    id: 219,
+    category: 'legal',
+    categoryLabel: '著作権・法規制',
+    question: 'AI社会原則として明記されているものはどれか？',
+    options: [
+      { text: 'プライバシー保護', correct: true },
+      { text: 'イノベーションの否定', correct: false },
+      { text: 'データ所有権の集中', correct: false },
+      { text: '技術の独占', correct: false },
+    ],
+    explanation: 'AI社会原則にはプライバシー保護、公平性の確保、アカウンタビリティ（説明責任）、イノベーションの推進が含まれます。イノベーションの否定、データ所有権の集中、技術の独占は含まれません。',
+  },
+  {
+    id: 220,
+    category: 'legal',
+    categoryLabel: '著作権・法規制',
+    question: 'AI社会原則に含まれないものはどれか？',
+    options: [
+      { text: 'プライバシー保護', correct: false },
+      { text: '公平性の確保', correct: false },
+      { text: 'アカウンタビリティ', correct: false },
+      { text: 'イノベーションの否定', correct: true },
+    ],
+    explanation: 'AI社会原則にはイノベーションの推進が含まれますが、イノベーションの否定は含まれません。プライバシー保護、公平性、アカウンタビリティ、推進が原則です。',
+  },
+  {
+    id: 221,
+    category: 'legal',
+    categoryLabel: '著作権・法規制',
+    question: '知的財産権に該当しないものはどれか？',
+    options: [
+      { text: '特許権', correct: false },
+      { text: '商標権', correct: false },
+      { text: 'ブロックチェーン', correct: true },
+      { text: '著作権', correct: false },
+    ],
+    explanation: '知的財産権には特許権、商標権、意匠権、著作権が含まれます。ブロックチェーンは分散型台帳技術であり技術仕組みであって、知的財産権ではありません。',
+  },
 ];
