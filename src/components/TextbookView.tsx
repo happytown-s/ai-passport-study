@@ -1,11 +1,16 @@
 import { useState, useMemo } from 'react';
 import textbookQuestionMap from '../data/textbook-question-map.json';
 
+interface HowToStep {
+  step: string;
+  detail: string;
+}
+
 interface TextbookTopic {
   topicId: string;
   title: string;
   summary: string;
-  howTo: string[];
+  howTo: (HowToStep | string)[];
   keywords: string[];
   examTip: string;
 }
@@ -307,6 +312,22 @@ function TopicDetail({
 }
 
 function TopicDetailContent({ topic, onSearchKeyword }: { topic: TextbookTopic; onSearchKeyword: (keyword: string) => void }) {
+  const [expandedSteps, setExpandedSteps] = useState<Set<number>>(new Set());
+
+  const normalizedSteps = topic.howTo.map((s) =>
+    typeof s === 'string' ? { step: s, detail: '' } : s
+  );
+  const hasDetails = normalizedSteps.some((s) => s.detail);
+
+  const toggleStep = (idx: number) => {
+    setExpandedSteps((prev) => {
+      const next = new Set(prev);
+      if (next.has(idx)) next.delete(idx);
+      else next.add(idx);
+      return next;
+    });
+  };
+
   return (
     <div className="space-y-4 mt-3">
       {/* How-to Section */}
@@ -317,14 +338,31 @@ function TopicDetailContent({ topic, onSearchKeyword }: { topic: TextbookTopic; 
           <span className="text-blue-500">]</span>
         </h4>
         <ol className="space-y-2">
-          {topic.howTo.map((step, i) => (
-            <li key={i} className="flex gap-2 text-sm">
-              <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-bold">
-                {i + 1}
-              </span>
-              <span className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                {step}
-              </span>
+          {normalizedSteps.map((s, i) => (
+            <li key={i} className="text-sm">
+              <div
+                className={`flex gap-2 items-start ${hasDetails && s.detail ? 'cursor-pointer' : ''}`}
+                onClick={() => hasDetails && s.detail && toggleStep(i)}
+              >
+                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-bold mt-0.5">
+                  {i + 1}
+                </span>
+                <span className="flex-1 text-gray-700 dark:text-gray-300 leading-relaxed">
+                  {s.step}
+                  {hasDetails && s.detail && (
+                    <span className="ml-1 text-gray-400 dark:text-gray-500 text-xs">
+                      {expandedSteps.has(i) ? '▲' : '▼'}
+                    </span>
+                  )}
+                </span>
+              </div>
+              {expandedSteps.has(i) && s.detail && (
+                <div className="ml-7 mt-1.5 pl-3 border-l-2 border-blue-200 dark:border-blue-800">
+                  <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                    {s.detail}
+                  </p>
+                </div>
+              )}
             </li>
           ))}
         </ol>
