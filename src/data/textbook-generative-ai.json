@@ -180,5 +180,19 @@
     ],
     "keywords": ["UL2R", "BERT", "GPT融合", "正則化", "早期終了", "Early Stopping", "過学習防止", "検証データ"],
     "examTip": "正則化の目的＝過学習の抑制、早期終了＝検証精度で停止。UL2R＝言語学習パラダイム。"
+  },
+  {
+    "topicId": "ga-16",
+    "title": "GPTシリーズの進化系譜",
+    "summary": "OpenAIのGPT（Generative Pre-trained Transformer）シリーズは、2018年のGPT-1から現在のGPT-5に至るまで、大規模言語モデルの進化を牽引してきた。2018年6月にGPT-1が自然な文章生成を実現し、2019年のGPT-2でパラメーター数を大幅に拡大。2020年のGPT-3で商業利用が始まり、2022年のGPT-3.5を基にChatGPTサービスが開始された。2023年のGPT-4で論理能力が飛躍的に向上。その後、2つの系統に分岐：対話系統（GPT-4o→GPT-4.1→GPT-5）と推論特化系統（GPT-o1→GPT-o3→GPT-o4-mini）。GPT-4o（2024年5月）は高速化・軽量化、GPT-o1（2024年9月）はChain of Thought（CoT）による思考特化、GPT-o3とGPT-o4-mini（2025年4月）は推論能力とコスト効率の最適化、GPT-4.1（2025年4月）は高性能マルチモーダル、GPT-5（2025年8月）はチャットと推論機能を統合した次世代モデル。関連技術として、Operator（自律型AIエージェント）、Codex（自然言語→コード変換）、Image Generation（GPT-4にネイティブ統合された画像生成）がある。",
+    "howTo": [
+      "GPT-1(2018)→GPT-2(2019)→GPT-3(2020)の基本系統を整理する",
+      "GPT-3.5(2022)でChatGPTサービスが開始された転換点を理解する",
+      "GPT-4(2023)→GPT-4o(2024)の対話系統を把握する",
+      "GPT-o1(2024)→GPT-o3(2025)の推論特化系統を理解する",
+      "Operator・Codex・Image Generationの用途別モデルを整理する"
+    ],
+    "keywords": ["GPT-1", "GPT-2", "GPT-3", "GPT-3.5", "ChatGPT", "GPT-4", "GPT-4o", "GPT-4.1", "GPT-5", "GPT-o1", "GPT-o3", "GPT-o4-mini", "Operator", "Codex", "Image Generation", "Chain of Thought", "CoT"],
+    "examTip": "GPT-3.5＝ChatGPT開始の壁、oシリーズ＝推論特化（別系統）、RLHF＝人間のフィードバックからの強化学習。この3つを押さえればGPT系譜は完璧。2018→2025の各モデルと年の対応を整理すること。"
   }
 ]
