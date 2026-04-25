@@ -149,6 +149,10 @@ export default function HomePage({
           </button>
         </div>
       </div>
+
+      <p className="max-w-2xl mx-auto px-4 mt-8 text-xs text-gray-400 dark:text-gray-500 leading-relaxed">
+        本サイトは非公式の試験対策問題集です。「生成AIパスポート」は一般社団法人生成AI活用普及協会（GUGA）の登録商標です。
+      </p>
     </div>
   );
 }
