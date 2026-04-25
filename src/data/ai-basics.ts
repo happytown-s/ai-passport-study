@@ -391,4 +391,30 @@ export const aiBasicsQuestions: Question[] = [
     ],
     explanation: 'レイ・カーツワイル等が提唱するシンギュラリティは、AIが自らを改良できるようになり、技術的進歩が指数関数的に加速して人間の理解を超える点を指します。',
   },
+  {
+    id: 214,
+    category: 'ai_basics',
+    categoryLabel: 'AI基礎知識',
+    question: 'AIエージェントの特徴として最も適切なものはどれか？',
+    options: [
+      { text: '人間の指示なしに自律的にタスクを実行できる', correct: true },
+      { text: '画像のみを生成できる', correct: false },
+      { text: 'ネットワークのセキュリティを管理する', correct: false },
+      { text: 'データベースのバックアップを行う', correct: false },
+    ],
+    explanation: 'AIエージェントは、最小限の指示に基づき自律的に計画を立て、ツールを使用し、目標を達成するまでタスクを継続的に実行するAIシステムです。従来の対話型AI（1問1答）とは異なります。',
+  },
+  {
+    id: 215,
+    category: 'ai_basics',
+    categoryLabel: 'AI基礎知識',
+    question: 'マルチエージェントシステムの説明として適切なものはどれか？',
+    options: [
+      { text: '一つのAIで全タスクを処理する仕組み', correct: false },
+      { text: '複数のAIエージェントが協調してタスクを遂行する仕組み', correct: true },
+      { text: 'AIと人間が交互に作業する仕組み', correct: false },
+      { text: 'AIが複数のデータベースを同時に検索する仕組み', correct: false },
+    ],
+    explanation: 'マルチエージェントシステムは、複数の自律的なAIエージェントがそれぞれの役割を分担し、協調して複雑なタスクを遂行する仕組みです。プロジェクト管理やシミュレーションなどで応用されています。',
+  },
 ];

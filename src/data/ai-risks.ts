@@ -391,4 +391,30 @@ export const aiRisksQuestions: Question[] = [
     ],
     explanation: 'AIリテラシーは、AIの仕組み・可能性・限界・リスクを理解し、情報の真偽を判断して適切に活用する能力です。生成AIの普及により、専門家だけでなく一般社会全体に求められる必須スキルとなっています。',
   },
+  {
+    id: 216,
+    category: 'ai_risks',
+    categoryLabel: 'AIのリスク・倫理',
+    question: 'シャドーAIの説明として最も適切なものはどれか？',
+    options: [
+      { text: 'AIが自律的に学習する仕組み', correct: false },
+      { text: 'AIの影（不可解な判断）のこと', correct: false },
+      { text: '企業が承認していないAIツールを従業員が業務で使用すること', correct: true },
+      { text: 'AIを使った影のような偽画像のこと', correct: false },
+    ],
+    explanation: 'シャドーAIは、企業が正式に承認・管理していないAIツールを従業員が個人的に業務で使用することです。機密情報の漏洩やコンプライアンス違反などの重大なリスクを伴います。',
+  },
+  {
+    id: 217,
+    category: 'ai_risks',
+    categoryLabel: 'AIのリスク・倫理',
+    question: '2025年3月に改訂された「AI事業者ガイドライン」で定められているものはどれか？',
+    options: [
+      { text: 'AIの技術仕様の統一', correct: false },
+      { text: 'AI事業者が遵守すべき基本原則', correct: true },
+      { text: 'AIの利用料金の上限', correct: false },
+      { text: 'AI開発者への補助金制度', correct: false },
+    ],
+    explanation: 'AI事業者ガイドライン（第1.1版）は、AIの開発・提供・利用に関わる事業者が遵守すべき基本原則を定めた指針です。開発者・提供者・利用者の3つの主体に応じた責任が規定されています。',
+  },
 ];

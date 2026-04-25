@@ -391,4 +391,30 @@ export const businessQuestions: Question[] = [
     ],
     explanation: 'AI倫理審査委員会は、AIシステムの公平性・透明性・プライバシー・安全性等を審査し、リスクが高い場合は導入の条件付・見送り等の判断を行う組織内のガバナンス機関です。多様な専門家の参加が望まれます。',
   },
+  {
+    id: 219,
+    category: 'business',
+    categoryLabel: 'ビジネス活用',
+    question: 'RAGをビジネスで活用するメリットとして最も適切なものはどれか？',
+    options: [
+      { text: '新しいAIモデルをゼロから開発できる', correct: false },
+      { text: '社内文書やナレッジに基づいた正確な回答が得られる', correct: true },
+      { text: '従業員のパスワードを一元管理できる', correct: false },
+      { text: 'ネットワークの通信速度が向上する', correct: false },
+    ],
+    explanation: 'RAGは社内の文書やナレッジベースを検索してLLMに補完情報を渡す手法であり、企業固有の情報に基づいた正確な回答を生成できることが最大のメリットです。',
+  },
+  {
+    id: 220,
+    category: 'business',
+    categoryLabel: 'ビジネス活用',
+    question: 'AIエージェントを業務に導入する際の注意点として適切なものはどれか？',
+    options: [
+      { text: '導入コストがかからない点', correct: false },
+      { text: '品質管理とセキュリティ対策が必須な点', correct: true },
+      { text: '全従業員がプログラミングできる必要がある点', correct: false },
+      { text: '導入後はメンテナンスが不要な点', correct: false },
+    ],
+    explanation: 'AIエージェントの業務導入では、誤った判断を防止する品質管理と、機密情報へのアクセスを制御するセキュリティ対策が不可欠です。また、人間の監督体制の構築も重要です。',
+  },
 ];

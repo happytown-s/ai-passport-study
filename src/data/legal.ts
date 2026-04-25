@@ -391,4 +391,17 @@ export const legalQuestions: Question[] = [
     ],
     explanation: 'G7広島AIプロセス、OECD AI原則、UNのAI決議等で国際的なガイドラインは形成されつつありますが、EU AI Actのような法的拘束力のある規制は地域によって異なり、世界的な統一ルールはまだ完成していません。',
   },
+  {
+    id: 218,
+    category: 'legal',
+    categoryLabel: '著作権・法規制',
+    question: '「AI新法」の基本構造として正しいものはどれか？',
+    options: [
+      { text: 'AIの利用を厳しく規制する法律', correct: false },
+      { text: 'AIの研究開発と活用を国家戦略として推進する法律', correct: true },
+      { text: 'EU AI法に準拠した国内法', correct: false },
+      { text: 'AI倫理を強制する法律', correct: false },
+    ],
+    explanation: 'AI新法（人工知能関連技術の研究開発及び活用の推進に関する法律）は、AIの利用を規制するものではなく、研究開発と活用を推進する法律です。AI戦略本部の設置や人材育成が柱となっています。',
+  },
 ];

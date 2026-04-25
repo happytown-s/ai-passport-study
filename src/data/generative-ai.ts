@@ -391,4 +391,43 @@ export const generativeAiQuestions: Question[] = [
     ],
     explanation: '合成データはAIで人工的に生成したデータで、実データの収集が困難・高コストな場面や、個人情報保護の観点から実データを使用できない場面で学習データの補完に活用されます。',
   },
+  {
+    id: 211,
+    category: 'generative_ai',
+    categoryLabel: '生成AIの仕組み',
+    question: 'RAG（検索拡張生成）の説明として最も適切なものはどれか？',
+    options: [
+      { text: '外部知識を検索してLLMに補完情報を与え、精度を向上させる手法', correct: true },
+      { text: 'LLMを追加学習させる手法', correct: false },
+      { text: '複数のAIモデルを組み合わせる手法', correct: false },
+      { text: 'データを暗号化してAIに渡す手法', correct: false },
+    ],
+    explanation: 'RAGは、ユーザーの質問に関連する情報を外部のナレッジベースから検索し、その情報をプロンプトに組み込んでLLMに回答させる手法です。ハルシネーションの軽減と最新情報の活用に効果的です。',
+  },
+  {
+    id: 212,
+    category: 'generative_ai',
+    categoryLabel: '生成AIの仕組み',
+    question: '2025年に公布された「AI新法」の正しい説明はどれか？',
+    options: [
+      { text: 'AIの利用を規制し罰則を定める法律', correct: false },
+      { text: 'AIの研究開発と活用を推進する法律', correct: true },
+      { text: 'AI生成物の著作権を規制する法律', correct: false },
+      { text: 'AI倫理基準を強制する法律', correct: false },
+    ],
+    explanation: 'AI新法（人工知能関連技術の研究開発及び活用の推進に関する法律）は、AIの利用を規制するものではなく、研究開発と活用を国家戦略として推進する法律です。2025年6月に公布されました。',
+  },
+  {
+    id: 213,
+    category: 'generative_ai',
+    categoryLabel: '生成AIの仕組み',
+    question: 'ChatGPTを開発したOpenAIの最新モデルとして、推論能力が大幅に向上したものはどれか？',
+    options: [
+      { text: 'GPT-4', correct: false },
+      { text: 'GPT-5', correct: true },
+      { text: 'DALL-E 3', correct: false },
+      { text: 'Whisper', correct: false },
+    ],
+    explanation: 'GPT-5はOpenAIの大規模言語モデルの最新版で、推論能力が大幅に向上しています。GPT-oシリーズ（o1、o3、o4）も推論特化モデルとして展開されています。',
+  },
 ];
