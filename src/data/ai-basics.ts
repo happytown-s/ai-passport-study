@@ -392,7 +392,7 @@ export const aiBasicsQuestions: Question[] = [
     explanation: 'レイ・カーツワイル等が提唱するシンギュラリティは、AIが自らを改良できるようになり、技術的進歩が指数関数的に加速して人間の理解を超える点を指します。',
   },
   {
-    id: 214,
+    id: 31,
     category: 'ai_basics',
     categoryLabel: 'AI基礎知識',
     question: 'AIエージェントの特徴として最も適切なものはどれか？',
@@ -405,7 +405,7 @@ export const aiBasicsQuestions: Question[] = [
     explanation: 'AIエージェントは、最小限の指示に基づき自律的に計画を立て、ツールを使用し、目標を達成するまでタスクを継続的に実行するAIシステムです。従来の対話型AI（1問1答）とは異なります。',
   },
   {
-    id: 215,
+    id: 32,
     category: 'ai_basics',
     categoryLabel: 'AI基礎知識',
     question: 'マルチエージェントシステムの説明として適切なものはどれか？',
@@ -418,7 +418,7 @@ export const aiBasicsQuestions: Question[] = [
     explanation: 'マルチエージェントシステムは、複数の自律的なAIエージェントがそれぞれの役割を分担し、協調して複雑なタスクを遂行する仕組みです。プロジェクト管理やシミュレーションなどで応用されています。',
   },
   {
-    id: 216,
+    id: 33,
     category: 'ai_basics',
     categoryLabel: 'AI基礎知識',
     question: 'AIの能力レベルで最も高いものはどれか？',
@@ -431,7 +431,7 @@ export const aiBasicsQuestions: Question[] = [
     explanation: 'ASI（Artificial Superintelligence）は人間の知能をあらゆる領域で遥かに超える仮説上のAIであり、AGI（汎用人工知能）よりもさらに高い能力レベルとされています。',
   },
   {
-    id: 217,
+    id: 34,
     category: 'ai_basics',
     categoryLabel: 'AI基礎知識',
     question: 'ルールベースAIの特徴として適切なものはどれか？',
@@ -444,7 +444,7 @@ export const aiBasicsQuestions: Question[] = [
     explanation: 'ルールベースAIは、人間があらかじめ定義したルール（if-then形式など）に従って処理を行うAIです。機械学習のようにデータから学習するのではなく、明示的に設計されたルールに依存します。',
   },
   {
-    id: 218,
+    id: 35,
     category: 'ai_basics',
     categoryLabel: 'AI基礎知識',
     question: '生物の脳を構成する情報処理の基本単位は何か？',
@@ -457,7 +457,7 @@ export const aiBasicsQuestions: Question[] = [
     explanation: 'ニューロンは生物の脳を構成する情報処理の基本単位であり、人工ニューロンのモデルの由来です。シナプスはニューロン同士をつなぐ結合点です。',
   },
   {
-    id: 219,
+    id: 36,
     category: 'ai_basics',
     categoryLabel: 'AI基礎知識',
     question: 'ニューロン同士をつなぐ結合点や枝分かれの構造は何と呼ばれるか？',
@@ -470,7 +470,7 @@ export const aiBasicsQuestions: Question[] = [
     explanation: 'シナプスはニューロン同士をつなぐ結合点や枝分かれの構造で、ニューラルネットワークの結合のモデルの由来です。',
   },
   {
-    id: 220,
+    id: 37,
     category: 'ai_basics',
     categoryLabel: 'AI基礎知識',
     question: '最新のAI技術が一般社会に受け入れられて普通に使われるようになるにつれて「AI」とは呼ばれなくなる現象を何と呼ぶか？',
@@ -483,7 +483,7 @@ export const aiBasicsQuestions: Question[] = [
     explanation: 'AI効果とは、最新のAI技術が一般社会に受け入れられて普通に使われるようになるにつれて「AI」とは呼ばれなくなる現象です。例えば、画像認識やレコメンデーションなどがすでに当たり前の技術となっています。',
   },
   {
-    id: 221,
+    id: 38,
     category: 'ai_basics',
     categoryLabel: 'AI基礎知識',
     question: 'シンギュラリティを提唱した有名な学者は誰か？',
@@ -496,7 +496,7 @@ export const aiBasicsQuestions: Question[] = [
     explanation: 'バーナービ・ヴィンジがシンギュラリティ（技術的特異点）を提唱した学者として有名です。レイ・カーツワイルはこの概念を普及させ、2045年問題を唱えました。',
   },
   {
-    id: 222,
+    id: 39,
     category: 'ai_basics',
     categoryLabel: 'AI基礎知識',
     question: '2045年問題を提唱しシンギュラリティを普及させた未来学者は誰か？',
@@ -509,7 +509,7 @@ export const aiBasicsQuestions: Question[] = [
     explanation: 'レイ・カーツワイルは2045年にAIが人間の知能を超える「2045年問題」を唱えた未来学者です。シンギュラリティの概念を広く一般に普及させました。',
   },
   {
-    id: 223,
+    id: 40,
     category: 'ai_basics',
     categoryLabel: 'AI基礎知識',
     question: '与えられた前提から結論を導き出すAIの基本処理は何か？',

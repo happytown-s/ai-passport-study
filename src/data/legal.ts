@@ -2,7 +2,7 @@ import type { Question } from '../core/types';
 
 export const legalQuestions: Question[] = [
   {
-    id: 151,
+    id: 5001,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '日本の著作権法第30条の4（柔軟な権利制限）の趣旨として正しいものはどれか？',
@@ -15,7 +15,7 @@ export const legalQuestions: Question[] = [
     explanation: '著作権法30条の4は、2018年の改正で追加された「情報解析」を目的とする著作物利用の例外規定で、AIの学習データ収集に一定の法的基盤を提供しています。ただし著作者の不利益な利用は制限されます。',
   },
   {
-    id: 152,
+    id: 5002,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '文化庁の「AIと著作権」に関する検討会における基本的な見解として正しいものはどれか？',
@@ -28,7 +28,7 @@ export const legalQuestions: Question[] = [
     explanation: '文化庁の検討では、AIの利用が著作権法上合法か否かは、利用目的（情報解析か享受か）や利用態様（類似性の程度等）によって個別に判断されるとされています。',
   },
   {
-    id: 153,
+    id: 5003,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「オプトアウト方式」とは著作権の文脈で何を意味するか？',
@@ -41,7 +41,7 @@ export const legalQuestions: Question[] = [
     explanation: 'オプトアウト方式は、デフォルトでAI学習への利用を許容し、著作権者が希望しない場合に自ら除外（オプトアウト）を表明する方式です。EU AI Act等で検討されていますが、実効性の課題も指摘されています。',
   },
   {
-    id: 154,
+    id: 5004,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「オプトイン方式」とは著作権の文脈で何を意味するか？',
@@ -54,7 +54,7 @@ export const legalQuestions: Question[] = [
     explanation: 'オプトイン方式は、AI学習への利用について著作権者からの事前の明示的許諾を必須とする方式です。クリエイター側から支持されていますが、実務上の課題（膨大な権利処理等）も指摘されています。',
   },
   {
-    id: 155,
+    id: 5005,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: 'AIで生成したコンテンツの著作権について日本の現行法上の取り扱いとして正しいものはどれか？',
@@ -67,7 +67,7 @@ export const legalQuestions: Question[] = [
     explanation: '日本の著作権法では著作者を自然人に限るため、AI単独で生成した成果物には原則著作権が認められません。ただし、人間が創作的に関与した部分には著作権が認められる可能性があります。',
   },
   {
-    id: 156,
+    id: 5006,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '個人情報保護法におけるAIの取り扱いに関する記述で正しいものはどれか？',
@@ -80,7 +80,7 @@ export const legalQuestions: Question[] = [
     explanation: '個人情報保護法はAI利用にも適用され、個人情報を学習データ等に利用する場合、利用目的の通知・公示、安全管理措置、第三者提供の制限等の義務が課されます。',
   },
   {
-    id: 157,
+    id: 5007,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「EU AI Act（欧州AI法）」のリスクベース・アプローチの説明として正しいものはどれか？',
@@ -93,7 +93,7 @@ export const legalQuestions: Question[] = [
     explanation: 'EU AI Actは、AIをリスクの高さに応じて4段階（不可接受・高リスク・限定的リスク・最小リスク）に分類し、リスクに応じた義務を課す規制です。ソーシャルスコアリング等は不可接受として禁止されます。',
   },
   {
-    id: 158,
+    id: 5008,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: 'EU AI Actで「不可接受リスク（Unacceptable Risk）」に分類されるものはどれか？',
@@ -106,7 +106,7 @@ export const legalQuestions: Question[] = [
     explanation: 'EU AI Actでは、人間の行動を監視して社会的信用を評価するソーシャルスコアリングや、潜意識的操作（サブリミナル操作など）を「不可接受リスク」としてEU域内での提供・使用を原則禁止しています。',
   },
   {
-    id: 159,
+    id: 5009,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: 'EU AI Actで「高リスク（High Risk）」AIに課される義務として正しいものはどれか？',
@@ -119,7 +119,7 @@ export const legalQuestions: Question[] = [
     explanation: '高リスクAI（医療診断、採用、法執行等）には、リスク管理、高品質データの確保、技術文書の作成・提出、人間の監督下での運用等の厳格な義務が課されます。',
   },
   {
-    id: 160,
+    id: 5010,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「生成AI事業者ガイドライン（第1.0版）」を公表した組織はどれか？',
@@ -132,7 +132,7 @@ export const legalQuestions: Question[] = [
     explanation: '経済産業省と総務省は2024年4月に「生成AI事業者ガイドライン（第1.0版）」を公表しました。AI事業者向けに、著作権対応、セキュリティ、品質管理等の留意事項を整理しています。',
   },
   {
-    id: 161,
+    id: 5011,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '生成AI事業者ガイドラインにおける「入力側」と「出力側」の考え方で正しいものはどれか？',
@@ -145,7 +145,7 @@ export const legalQuestions: Question[] = [
     explanation: 'ガイドラインでは、AIへの入力（学習データやプロンプトに含まれる著作物）とAIからの出力（生成物が既存著作物に類似するか）の両面で、著作権法等の法令上の整理を行っています。',
   },
   {
-    id: 162,
+    id: 5012,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「専門委員会・AIと知的財産権」における主要な議論テーマとして正しいものはどれか？',
@@ -158,7 +158,7 @@ export const legalQuestions: Question[] = [
     explanation: '文化庁の「AIと知的財産権」に関する専門委員会では、AI生成物の著作権保護の有無・帰属、既存著作物のAI学習への利用範囲、オプトアウト/オプトインの在り方等が中心的に議論されています。',
   },
   {
-    id: 163,
+    id: 5013,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '著作権法における「アイデアと表現の二分論」の説明として正しいものはどれか？',
@@ -171,7 +171,7 @@ export const legalQuestions: Question[] = [
     explanation: '二分論は著作権法の基本原則で、アイデア自体は誰でも自由に利用できるが、それを具体的に表現した形（文章・絵画・音楽等）にのみ著作権が認められます。AIの学習が「表現」に及ぶかどうかが議論の焦点です。',
   },
   {
-    id: 164,
+    id: 5014,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「類似性」と「依拠性」の著作権侵害の判断基準について正しいものはどれか？',
@@ -184,7 +184,7 @@ export const legalQuestions: Question[] = [
     explanation: '著作権侵害の成立には、結果の類似性と、既存著作物に依拠（アクセス）して創作されたという依拠性の両方が必要です。AIが偶然似た出力を生成した場合、依拠性がなければ侵害となりません。',
   },
   {
-    id: 165,
+    id: 5015,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「著作権法第30条の4」と「第30条の3」の関係について正しいものはどれか？',
@@ -197,7 +197,7 @@ export const legalQuestions: Question[] = [
     explanation: '30条の3は「電子計算機による情報処理」のための規定で、30条の4はそれに加えて「情報解析（AI学習等）」を明示的に例外とした規定です。両条は共存しており、目的に応じて適用されます。',
   },
   {
-    id: 166,
+    id: 5016,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '個人情報保護法の「仮名加工情報」とは何か？',
@@ -210,7 +210,7 @@ export const legalQuestions: Question[] = [
     explanation: '仮名加工情報は、個人情報の一部を削除・置換等して、単独では個人を識別できないが、他の情報と組み合わせれば識別可能な状態の情報です。学習データの匿名化手法の一つとして注目されています。',
   },
   {
-    id: 167,
+    id: 5017,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「越境移転（Cross-border Transfer）」の個人情報に関する規制として正しいものはどれか？',
@@ -223,7 +223,7 @@ export const legalQuestions: Question[] = [
     explanation: '個人情報保護法では、外国の第三者に個人情報を提供する場合、本人の同意取得等の要件を満たすか、十分な保護水準を有する国（EU等）への移転に限る等の制限があります。',
   },
   {
-    id: 168,
+    id: 5018,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「フェアユース（Fair Use）」の原則は主にどの国の著作権法に由来するか？',
@@ -236,7 +236,7 @@ export const legalQuestions: Question[] = [
     explanation: 'フェアユースは米国著作権法に基づく判断基準で、利用目的・性質・量・市場への影響等を総合考慮して著作権侵害か否かを判断します。日本は列挙主義で、具体的な例外規定を明記する方式です。',
   },
   {
-    id: 169,
+    id: 5019,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「AIと著作権」に関する米国の裁判例における一般的な傾向として正しいものはどれか？',
@@ -249,7 +249,7 @@ export const legalQuestions: Question[] = [
     explanation: '米国著作権局と連邦裁判所は、人間の創作的寄与を伴わないAI生成物には著作権を登録・認定しない立場です。Thaler v. Perlmutter事件等の判例がこの方向性を示しています。',
   },
   {
-    id: 170,
+    id: 5020,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「不競法（不正競争防止法）」におけるAI関連の規制として正しいものはどれか？',
@@ -262,7 +262,7 @@ export const legalQuestions: Question[] = [
     explanation: '不正競争防止法は、著作権法とは別に、他人の営業努力にただ乗りする行為等を規制します。既存コンテンツを無断で大量学習し類似物を提供する行為が不正競争に該当するかが議論されています。',
   },
   {
-    id: 171,
+    id: 5021,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「AIの利用に関する契約」で重要なポイントとして正しいものはどれか？',
@@ -275,7 +275,7 @@ export const legalQuestions: Question[] = [
     explanation: 'AIサービスの利用契約では、入力データの学習利用の有無、データの保存期間・地域、生成物の権利帰属、免責事項等を確認することが重要です。特に機密情報の取り扱いに注意が必要です。',
   },
   {
-    id: 172,
+    id: 5022,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「日本のAI戦略」の方向性として正しいものはどれか？',
@@ -288,7 +288,7 @@ export const legalQuestions: Question[] = [
     explanation: '日本のAI戦略は、「AI戦略会議」等を通じて、イノベーション促進とリスク管理の両立を基本方針としています。G7広島AIプロセス等の国際的なルール形成にも積極的に参加しています。',
   },
   {
-    id: 173,
+    id: 5023,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「G7広島AIプロセス」で合意された主要な成果物はどれか？',
@@ -301,7 +301,7 @@ export const legalQuestions: Question[] = [
     explanation: 'G7広島AIプロセス（2023年）で、生成AIの開発者・提供者向けの包括的な行動指針と行動規範が合意されました。安全性・透明性・公平性等の原則と具体的な推奨事項を含んでいます。',
   },
   {
-    id: 174,
+    id: 5024,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「DPA（データ保護影響評価）」の説明として正しいものはどれか？',
@@ -314,7 +314,7 @@ export const legalQuestions: Question[] = [
     explanation: 'DPIA（Data Protection Impact Assessment）は、個人情報を用いた処理が高いリスクを伴う場合に、事前にリスク評価と軽減策の検討を義務付ける仕組みです。GDPRや日本の個人情報保護法で規定されています。',
   },
   {
-    id: 175,
+    id: 5025,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「クリエイターの権利保護」とAIの学習データに関する議論で正しいものはどれか？',
@@ -327,7 +327,7 @@ export const legalQuestions: Question[] = [
     explanation: '画像・音楽等のクリエイターからは、自身の作品が無断でAI学習に使われることへの懸念が強く表明されています。オプトアウト権の法制化、ライセンス体系の構築等が議論されています。',
   },
   {
-    id: 176,
+    id: 5026,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「AIの利用に関する労働法上の論点」として正しいものはどれか？',
@@ -340,7 +340,7 @@ export const legalQuestions: Question[] = [
     explanation: 'AIによる業務効率化や従業員の行動監視・評価は、労働法（プライバシー、労働時間、整理解雇の有効性等）との関連で論点となっています。EU AI Actでも職場におけるAI利用の規制が含まれています。',
   },
   {
-    id: 177,
+    id: 5027,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「AIガバナンス」の定義として最も適切なものはどれか？',
@@ -353,7 +353,7 @@ export const legalQuestions: Question[] = [
     explanation: 'AIガバナンスは、AIの開発・提供・利用の各段階で、倫理原則・法規制・組織体制・監査等を体系的に整備し、AIの健全な社会実装を図るための総合的な枠組みを指します。',
   },
   {
-    id: 178,
+    id: 5028,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「肖像権」とAI画像生成の関係について正しいものはどれか？',
@@ -366,7 +366,7 @@ export const legalQuestions: Question[] = [
     explanation: '実在人物の顔画像を学習データに使用したり、生成画像に特定人物に似た顔を含めたりすることは、肖像権・パブリシティ権の侵害となる可能性があります。ディープフェイク規制とも関連します。',
   },
   {
-    id: 179,
+    id: 5029,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「AIサービスの利用規約」で特に確認すべき事項として正しいものはどれか？',
@@ -379,7 +379,7 @@ export const legalQuestions: Question[] = [
     explanation: 'AIサービスの利用規約では、入力データが学習に使われるか、データの保存先・期間、生成物の著作権帰属、サービスのSLA・免責事項等を確認することが重要です。特に機密情報の取り扱いに注意が必要です。',
   },
   {
-    id: 180,
+    id: 5030,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「AIに関する国際的なルール形成」の現状として正しいものはどれか？',
@@ -392,7 +392,7 @@ export const legalQuestions: Question[] = [
     explanation: 'G7広島AIプロセス、OECD AI原則、UNのAI決議等で国際的なガイドラインは形成されつつありますが、EU AI Actのような法的拘束力のある規制は地域によって異なり、世界的な統一ルールはまだ完成していません。',
   },
   {
-    id: 218,
+    id: 5031,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '「AI新法」の基本構造として正しいものはどれか？',
@@ -405,7 +405,7 @@ export const legalQuestions: Question[] = [
     explanation: 'AI新法（人工知能関連技術の研究開発及び活用の推進に関する法律）は、AIの利用を規制するものではなく、研究開発と活用を推進する法律です。AI戦略本部の設置や人材育成が柱となっています。',
   },
   {
-    id: 219,
+    id: 5032,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: 'AI社会原則として明記されているものはどれか？',
@@ -418,7 +418,7 @@ export const legalQuestions: Question[] = [
     explanation: 'AI社会原則にはプライバシー保護、公平性の確保、アカウンタビリティ（説明責任）、イノベーションの推進が含まれます。イノベーションの否定、データ所有権の集中、技術の独占は含まれません。',
   },
   {
-    id: 220,
+    id: 5033,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: 'AI社会原則に含まれないものはどれか？',
@@ -431,7 +431,7 @@ export const legalQuestions: Question[] = [
     explanation: 'AI社会原則にはイノベーションの推進が含まれますが、イノベーションの否定は含まれません。プライバシー保護、公平性、アカウンタビリティ、推進が原則です。',
   },
   {
-    id: 221,
+    id: 5034,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '知的財産権に該当しないものはどれか？',
@@ -444,7 +444,7 @@ export const legalQuestions: Question[] = [
     explanation: '知的財産権には特許権、商標権、意匠権、著作権が含まれます。ブロックチェーンは分散型台帳技術であり技術仕組みであって、知的財産権ではありません。',
   },
   {
-    id: 222,
+    id: 5035,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '実用的な考案を保護する権利は何か？',
@@ -457,7 +457,7 @@ export const legalQuestions: Question[] = [
     explanation: '実用新案権は実用的な考案を保護する権利で、知的財産権の一つです。特許より取得要件が緩やかで、登録も比較的容易です。',
   },
   {
-    id: 223,
+    id: 5036,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '芸能人や著名人の容姿や肖像を保護する権利は何か？',
@@ -470,7 +470,7 @@ export const legalQuestions: Question[] = [
     explanation: '肖像権は芸能人や著名人の容姿や肖像を保護する権利です。実在人物の顔をAIで無断使用することは肖像権侵害となりうります。',
   },
   {
-    id: 224,
+    id: 5037,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '芸能人などの名前やイメージを商業利用から守る権利は何か？',
@@ -483,7 +483,7 @@ export const legalQuestions: Question[] = [
     explanation: 'パブリシティ権は芸能人などの名前やイメージを商業利用から守る権利です。肖像権とは独立した権利で、営利的な利用を制限します。',
   },
   {
-    id: 225,
+    id: 5038,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '不正な競争を防ぐための法律は何か？',
@@ -496,7 +496,7 @@ export const legalQuestions: Question[] = [
     explanation: '不正競争防止法は不正な競争を防ぐための法律で、営業秘密や限定提供データの保護を定めています。',
   },
   {
-    id: 226,
+    id: 5039,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '企業が競争力を維持するために秘密にしている事業活動上有用な情報は何と呼ばれるか？',
@@ -509,7 +509,7 @@ export const legalQuestions: Question[] = [
     explanation: '営業秘密は企業が競争力を維持するために秘密にしている事業活動上有用な情報で、不正競争防止法で保護されます。',
   },
   {
-    id: 227,
+    id: 5040,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '特定の事業者に提供されることが前提の技術上または営業上の情報で、不正競争防止法で保護されるものは何か？',
@@ -522,7 +522,7 @@ export const legalQuestions: Question[] = [
     explanation: '限定提供データは不正競争防止法で保護されるデータで、特定の事業者に提供されることが前提の技術上または営業上の情報です。',
   },
   {
-    id: 228,
+    id: 5041,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '特定の個人を識別できる身体の特徴をデータ化した符号や公的サービスで個人に割り当てられる番号は何と呼ばれるか？',
@@ -535,7 +535,7 @@ export const legalQuestions: Question[] = [
     explanation: '個人識別符号は特定の個人を識別できるものとして、身体の特徴をデータ化した符号や公的サービスで個人に割り当てられる番号です。',
   },
   {
-    id: 229,
+    id: 5042,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '不当な差別や偏見が生じないように特に配慮を要する個人情報は何か？',
@@ -548,7 +548,7 @@ export const legalQuestions: Question[] = [
     explanation: '要配慮個人情報は不当な差別や偏見その他の不利益が生じないように取り扱いに特に配慮を要する個人情報です。人種、信条、犯罪歴等が含まれます。',
   },
   {
-    id: 230,
+    id: 5043,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '個人が特定できないように加工されたデータは何か？',
@@ -561,7 +561,7 @@ export const legalQuestions: Question[] = [
     explanation: '匿名加工情報は個人が特定できないように加工されたデータで、個人情報保護法で定義されています。一定の条件下で第三者提供が可能です。',
   },
   {
-    id: 231,
+    id: 5044,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '2025年6月4日に交付されたAI新法の正式名称は何か？',
@@ -574,7 +574,7 @@ export const legalQuestions: Question[] = [
     explanation: 'AI新法の正式名称は「人工知能関連技術の研究開発及び活用の推進に関する法律」です。2025年6月4日に交付されました。',
   },
   {
-    id: 232,
+    id: 5045,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '人間中心のAI社会原則の基本理念で、人が持つ尊厳や人間らしさを尊重する理念は何か？',
@@ -587,7 +587,7 @@ export const legalQuestions: Question[] = [
     explanation: '人間の尊厳（Dignity）は人間中心のAI社会原則の基本理念の一つで、人が持つ尊厳や人間らしさを尊重する理念です。',
   },
   {
-    id: 233,
+    id: 5046,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: '人間中心のAI社会原則で、多様な背景を持つ人々が共に幸福を追求できる理念は何か？',
@@ -600,7 +600,7 @@ export const legalQuestions: Question[] = [
     explanation: 'D&I（Diversity & Inclusion）は人間中心のAI社会原則の基本理念の一つで、多様な背景を持つ人々が共に幸福を追求できる社会の理念です。',
   },
   {
-    id: 234,
+    id: 5047,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: 'AI事業者ガイドラインで「AIが個人の不当な取り扱いをされないよう配慮する」考え方を重視する原則は何か？',
@@ -613,7 +613,7 @@ export const legalQuestions: Question[] = [
     explanation: '公平性はAI事業者ガイドラインで示されている原則の一つで、AIの利用で不当な差別や偏見が生じないよう適正な仕組みを求める考え方です。',
   },
   {
-    id: 235,
+    id: 5048,
     category: 'legal',
     categoryLabel: '著作権・法規制',
     question: 'AIシステムを設計・開発する人や組織をAI事業者ガイドラインでは何と呼ぶか？',

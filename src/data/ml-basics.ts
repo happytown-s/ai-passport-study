@@ -2,7 +2,7 @@ import type { Question } from '../core/types';
 
 export const mlBasicsQuestions: Question[] = [
   {
-    id: 31,
+    id: 1001,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '教師あり学習の特徴として正しいものはどれか？',
@@ -15,7 +15,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: '教師あり学習は、入力データと正解ラベル（教師信号）のペアを用いて、入力から出力を予測するモデルを学習します。',
   },
   {
-    id: 32,
+    id: 1002,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '教師なし学習の代表的な手法はどれか？',
@@ -28,7 +28,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: 'K-meansは正解ラベルなしにデータを類似したグループ（クラスタ）に分類する教師なし学習の代表的手法です。',
   },
   {
-    id: 33,
+    id: 1003,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '強化学習の要素として正しい組み合わせはどれか？',
@@ -41,7 +41,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: '強化学習は、エージェントが環境の中で行動を選択し、報酬を最大化するよう方策を学習する枠組みです。',
   },
   {
-    id: 34,
+    id: 1004,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '過学習（オーバーフィッティング）の説明として正しいものはどれか？',
@@ -54,7 +54,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: '過学習は、モデルが訓練データのノイズや特徴まで暗記してしまい、未知のデータ（テストデータ）に対する汎化性能が低下する現象です。',
   },
   {
-    id: 35,
+    id: 1005,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '過学習を防ぐ手法として最も適切なものはどれか？',
@@ -67,7 +67,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: '正則化（L1/L2）は、モデルの重みにペナルティを課すことで複雑すぎるモデルを抑制し、過学習を防ぐ代表的な手法です。ドロップアウトやデータ拡張も有効です。',
   },
   {
-    id: 36,
+    id: 1006,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「分類」と「回帰」の違いは何か？',
@@ -80,7 +80,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: '分類はデータを離散的なカテゴリ（例：スパム/非スパム）に分類し、回帰は連続的な数値（例：価格、温度）を予測します。どちらも教師あり学習です。',
   },
   {
-    id: 37,
+    id: 1007,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「バイアス・バリアンストレードオフ」とは何か？',
@@ -93,7 +93,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: 'バイアスはモデルの単純化による誤差、バリアンスは訓練データの変動に対するモデルの敏感さです。モデルを複雑にするとバイアスは減るがバリアンスが増え、その逆も成立します。',
   },
   {
-    id: 38,
+    id: 1008,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '交差検証（クロスバリデーション）の目的は何か？',
@@ -106,7 +106,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: '交差検証はデータを複数のフォールドに分割し、それぞれをテスト用としてモデルを評価することで、限られたデータでの汎化性能評価をより信頼性高く行う手法です。',
   },
   {
-    id: 39,
+    id: 1009,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「決定木」の特徴として正しいものはどれか？',
@@ -119,7 +119,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: '決定木は、データの特徴量に基づいてif-thenルールによる木構造を構築し、直感的に理解しやすい（解釈性が高い）ことが最大の特徴です。',
   },
   {
-    id: 40,
+    id: 1010,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: 'ランダムフォレストの「アンサンブル学習」としての特徴はどれか？',
@@ -132,7 +132,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: 'ランダムフォレストは、ブートストラップサンプリングと特徴量のランダム選択で複数の決定木を構築し、その予測を多数決等で集約するアンサンブル手法です。',
   },
   {
-    id: 41,
+    id: 1011,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「勾配降下法」の説明として正しいものはどれか？',
@@ -145,7 +145,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: '勾配降下法は、損失関数の勾配（偏微分）を計算し、勾配の逆方向にパラメータを少しずつ更新して損失を最小化する最適化アルゴリズムです。',
   },
   {
-    id: 42,
+    id: 1012,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「学習率（Learning Rate）」を大きく設定しすぎるとどうなるか？',
@@ -158,7 +158,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: '学習率が大きすぎると、パラメータ更新幅が大きくなりすぎて最適解を飛び越え、損失が発散（増大）して学習が失敗する可能性があります。',
   },
   {
-    id: 43,
+    id: 1013,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「主成分分析（PCA）」の主な目的は何か？',
@@ -171,7 +171,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: 'PCAは、高次元データの分散を最大化する方向にデータを投影し、情報損失を最小限に抑えつつ次元を削減する教師なし次元削減手法です。',
   },
   {
-    id: 44,
+    id: 1014,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「精度（Accuracy）」が不適切な評価指標となるケースはどれか？',
@@ -184,7 +184,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: 'クラス不均衡が著しい場合、すべて「正常」と予測するだけでも精度99%になります。このような場合は適合率（Precision）、再現率（Recall）、F値が適切です。',
   },
   {
-    id: 45,
+    id: 1015,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「適合率（Precision）」の定義として正しいものはどれか？',
@@ -197,7 +197,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: '適合率 = TP / (TP + FP) で、モデルが「正例」と予測したデータのうち、実際に正例だった割合です。誤報（False Positive）を抑えたい時に重要な指標です。',
   },
   {
-    id: 46,
+    id: 1016,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「再現率（Recall）」の定義として正しいものはどれか？',
@@ -210,7 +210,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: '再現率 = TP / (TP + FN) で、実際の正例のうちモデルが見逃さずに正例と予測した割合です。見逃し（False Negative）を減らしたい時に重要です。',
   },
   {
-    id: 47,
+    id: 1017,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「F値（F-measure）」とは何か？',
@@ -223,7 +223,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: 'F値 = 2 × (Precision × Recall) / (Precision + Recall) で、適合率と再現率のバランスを示す指標です。β=1のF1スコアが一般的に使われます。',
   },
   {
-    id: 48,
+    id: 1018,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「サポートベクターマシン（SVM）」の基本的な考え方は何か？',
@@ -236,7 +236,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: 'SVMは、クラスを分ける境界線の中で、最もマージン（境界から最近接データ点までの距離）が大きくなる超平面を求める手法です。',
   },
   {
-    id: 49,
+    id: 1019,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「特徴量エンジニアリング」とは何か？',
@@ -249,7 +249,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: '特徴量エンジニアリングは、データサイエンスの知識を使って既存の特徴量から新しい変数を作成したり、重要な特徴量を選択したりしてモデルの性能を向上させる作業です。',
   },
   {
-    id: 50,
+    id: 1020,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「転移学習」とは何か？',
@@ -262,7 +262,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: '転移学習は、大規模データセットで事前学習したモデルの重みを出発点として、少量のデータで別の関連タスクを効率よく学習させる手法です。',
   },
   {
-    id: 51,
+    id: 1021,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「ホールドアウト法」でデータを分割する際、一般的な比率はどれか？',
@@ -275,7 +275,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: 'ホールドアウト法では、一般的にデータの70〜80%を訓練用、残り20〜30%をテスト用に分割します。さらに訓練データから検証用を分割することもあります。',
   },
   {
-    id: 52,
+    id: 1022,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「バギング」と「ブースティング」の違いとして正しいものはどれか？',
@@ -288,7 +288,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: 'バギングは複数のモデルを独立並列に学習して結果を集約し、ブースティングは前のモデルの誤分類データに重みを増やして逐次的にモデルを学習させます。',
   },
   {
-    id: 53,
+    id: 1023,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「カーネルトリック」の説明として正しいものはどれか？',
@@ -301,7 +301,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: 'カーネルトリックは、SVM等でデータを暗黙的に高次元特徴空間に写像し、計算コストを抑えつつ非線形な決定境界を可能にする数学的手法です。',
   },
   {
-    id: 54,
+    id: 1024,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「k-近傍法（k-NN）」の特徴として正しいものはどれか？',
@@ -314,7 +314,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: 'k-NNは「怠惰学習」とも呼ばれ、学習段階でモデルを構築せず、予測時に入力に近いk個の訓練データを探して多数決（分類）や平均（回帰）で予測します。',
   },
   {
-    id: 55,
+    id: 1025,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「ディープラーニング」が従来の機械学習と異なる点は何か？',
@@ -327,7 +327,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: 'ディープラーニングは多層のニューラルネットワークで特徴量の自動学習（表現学習）を行う点が従来機械学習との最大の違いで、大規模データでの高い性能が特徴です。',
   },
   {
-    id: 56,
+    id: 1026,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「バッチ学習」と「オンライン学習」の違いとして正しいものはどれか？',
@@ -340,7 +340,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: 'バッチ学習は訓練データ全体で一度にパラメータを更新し、オンライン学習はデータを一つずつ入力して逐次的にパラメータを更新します。オンライン学習はストリーミングデータに適しています。',
   },
   {
-    id: 57,
+    id: 1027,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「ROC曲線」の横軸と縦軸は何を表すか？',
@@ -353,7 +353,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: 'ROC曲線は横軸に偽陽性率（FPR = FP/(FP+TN)）、縦軸に真陽性率（TPR = Recall）をプロットし、AUC（曲線下面積）が分類器の性能指標になります。',
   },
   {
-    id: 58,
+    id: 1028,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「次元の呪い」とは何か？',
@@ -366,7 +366,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: '次元の呪いは、特徴量の次元が高くなると必要なデータ量が指数関数的に増加し、データが空間的にまばらになるため学習が困難になる現象です。',
   },
   {
-    id: 59,
+    id: 1029,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「自己教師あり学習」の説明として正しいものはどれか？',
@@ -379,7 +379,7 @@ export const mlBasicsQuestions: Question[] = [
     explanation: '自己教師あり学習は、入力データの一部を隠してそれを予測する等、データ自体から教師信号を自動生成して事前学習する手法で、BERTやSimCLR等が代表例です。',
   },
   {
-    id: 60,
+    id: 1030,
     category: 'ml_basics',
     categoryLabel: '機械学習基礎',
     question: '「ハイパーパラメータ」と「パラメータ」の違いとして正しいものはどれか？',

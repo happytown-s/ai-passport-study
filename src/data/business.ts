@@ -2,7 +2,7 @@ import type { Question } from '../core/types';
 
 export const businessQuestions: Question[] = [
   {
-    id: 181,
+    id: 6001,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: 'AI導入の一般的なフェーズとして正しい順序はどれか？',
@@ -15,7 +15,7 @@ export const businessQuestions: Question[] = [
     explanation: 'AI導入は、まずビジネス課題の明確化と要件定義を行い、次にPoC（概念実証）で有効性を検証し、小規模導入で運用を確認してから本番展開するのが一般的です。',
   },
   {
-    id: 182,
+    id: 6002,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「PoC（Proof of Concept：概念実証）」の目的として正しいものはどれか？',
@@ -28,7 +28,7 @@ export const businessQuestions: Question[] = [
     explanation: 'PoCは、限られた期間・予算・データでAI技術の有効性・実現可能性を検証する段階です。成功/失敗の早期判定により、無駄な投資を防ぎ、本格導入の判断材料を提供します。',
   },
   {
-    id: 183,
+    id: 6003,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: 'AI導入のROI（投資対効果）評価で考慮すべき要素として正しいものはどれか？',
@@ -41,7 +41,7 @@ export const businessQuestions: Question[] = [
     explanation: 'AIのROIは、初期導入コスト（ライセンス・インフラ・教育）と継続運用コストに対し、業務効率化・品質向上・新規収源等のベネフィットを定量的に評価します。定性的効果（従業員満足度等）も重要です。',
   },
   {
-    id: 184,
+    id: 6004,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「社内AIガイドライン」に含めるべき項目として最も適切なものはどれか？',
@@ -54,7 +54,7 @@ export const businessQuestions: Question[] = [
     explanation: '社内AIガイドラインは、AIの許容される利用範囲・禁止事項（機密情報入力禁止等）・品質確認手順・セキュリティ要件・問い合わせ窓口等を明確にし、従業員が安全にAIを活用できるよう支援するものです。',
   },
   {
-    id: 185,
+    id: 6005,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: 'カスタマーサポートにおける生成AIのユースケースとして正しいものはどれか？',
@@ -67,7 +67,7 @@ export const businessQuestions: Question[] = [
     explanation: '生成AIを活用したチャットボットは、顧客からのよくある質問に自動回答し、複雑な問い合わせはオペレーターに回答文を提案する等、応対品質と効率を大幅に向上させます。',
   },
   {
-    id: 186,
+    id: 6006,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: 'マーケティング分野での生成AIの活用として正しいものはどれか？',
@@ -80,7 +80,7 @@ export const businessQuestions: Question[] = [
     explanation: '生成AIは、広告文の生成、SNS投稿の作成、顧客セグメント別のパーソナライズメッセージ、市場動向のレポート作成等、マーケティングの多岐にわたる業務で活用されています。',
   },
   {
-    id: 187,
+    id: 6007,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '人事分野でのAI活用において注意すべきリスクとして正しいものはどれか？',
@@ -93,7 +93,7 @@ export const businessQuestions: Question[] = [
     explanation: '履歴書スクリーニングAI等で、過去の採用データに潜む性別・年齢・学歴等のバイアスが反映され、特定の属性を持つ応募者を不当に排除するリスクがあります。公平性の監査と人間の最終判断が重要です。',
   },
   {
-    id: 188,
+    id: 6008,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「データ駆動経営」とAIの関係として正しいものはどれか？',
@@ -106,7 +106,7 @@ export const businessQuestions: Question[] = [
     explanation: 'データ駆動経営は意思決定をデータと事実に基づかせる経営手法で、AIは膨大なデータからパターンやインサイトを高速に抽出し、意思決定の質と速度を向上させる不可欠なツールです。',
   },
   {
-    id: 189,
+    id: 6009,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: 'AI導入における「チェンジマネジメント」の重要性として正しいものはどれか？',
@@ -119,7 +119,7 @@ export const businessQuestions: Question[] = [
     explanation: 'AI導入では、業務プロセスの変更や役割の再定義により従業員の不安や抵抗が生じます。教育・コミュニケーション・段階的導入等のチェンジマネジメントが、定着と効果最大化に不可欠です。',
   },
   {
-    id: 190,
+    id: 6010,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AIコンプライアンス」で企業が対応すべき事項として正しいものはどれか？',
@@ -132,7 +132,7 @@ export const businessQuestions: Question[] = [
     explanation: 'AIコンプライアンスは、個人情報保護法・著作権法・労働法・独占禁止法等の法令遵守と、AI倫理原則に沿った利用を確保する企業の取り組みです。AI導入の初期段階から検討が必要です。',
   },
   {
-    id: 191,
+    id: 6011,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AIのブラックボックス問題」がビジネスに与える影響として正しいものはどれか？',
@@ -145,7 +145,7 @@ export const businessQuestions: Question[] = [
     explanation: '金融・医療等の規制産業では、AIの判断根拠を説明できないと法令上の問題となります。また、顧客に対してAI判断の理由を説明できない場合、信頼性や受容性に悪影響を及ぼします。',
   },
   {
-    id: 192,
+    id: 6012,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AIのスモールスタート」というアプローチの説明として正しいものはどれか？',
@@ -158,7 +158,7 @@ export const businessQuestions: Question[] = [
     explanation: 'スモールスタートは、特定の部門や業務で小規模にAIを導入し、成功事例と知見を蓄積して全社展開に繋げるアプローチです。リスクを抑えつつ組織全体のAIリテラシーを向上させます。',
   },
   {
-    id: 193,
+    id: 6013,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '生成AIを社内で活用する際、最も注意すべき情報セキュリティ上のリスクはどれか？',
@@ -171,7 +171,7 @@ export const businessQuestions: Question[] = [
     explanation: 'ChatGPT等のクラウドAIサービスに機密情報を入力すると、サービス事業者の学習データに利用されるリスクがあります。エンタープライズ版の利用、オープンソースモデルのローカル導入等の対策が重要です。',
   },
   {
-    id: 194,
+    id: 6014,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AIプロダクトマネジメント」の職務として正しいものはどれか？',
@@ -184,7 +184,7 @@ export const businessQuestions: Question[] = [
     explanation: 'AIプロダクトマネージャーは、ビジネス要件とAI技術を橋渡し、プロダクトの方向性・優先順位・成功指標（KPI）を定義します。技術とビジネスの両面を理解する役割が求められます。',
   },
   {
-    id: 195,
+    id: 6015,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AIの総所有コスト（TCO）」に含まれる要素として正しいものはどれか？',
@@ -197,7 +197,7 @@ export const businessQuestions: Question[] = [
     explanation: 'AIのTCOは、ハードウェア・ソフトウェア・クラウド・人材・教育・保守・アップデート等の全コストを網羅的に評価し、導入の経済的判断を行うための指標です。初期費用だけでなくランニングコストも重要です。',
   },
   {
-    id: 196,
+    id: 6016,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '法務分野での生成AIの活用として正しいものはどれか？',
@@ -210,7 +210,7 @@ export const businessQuestions: Question[] = [
     explanation: '生成AIは、長文契約書の要約・リスク箇所の抽出、関連法規の調査、リーガルメモのドラフト作成等で活用され、法務業務の効率化に貢献します。ただし、最終的な法的判断は人間が行う必要があります。',
   },
   {
-    id: 197,
+    id: 6017,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AIの継続的改善（MLOps）」の説明として正しいものはどれか？',
@@ -223,7 +223,7 @@ export const businessQuestions: Question[] = [
     explanation: 'MLOpsは、機械学習モデルの開発・デプロイ・監視・再学習のライフサイクルをDevOpsの手法で自動化・継続的に管理する仕組みです。データドリフトやモデル劣化を検知し、品質を維持します。',
   },
   {
-    id: 198,
+    id: 6018,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '教育・研修分野でのAI活用として正しいものはどれか？',
@@ -236,7 +236,7 @@ export const businessQuestions: Question[] = [
     explanation: 'AIは教育分野で、生徒一人ひとりの理解度に合わせた個別最適化学習、記述式問題の採点支援、教材・テスト問題の自動生成、学習データに基づく適切な指導の提案等に活用されています。',
   },
   {
-    id: 199,
+    id: 6019,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '製造業におけるAIのユースケースとして正しいものはどれか？',
@@ -249,7 +249,7 @@ export const businessQuestions: Question[] = [
     explanation: '製造業では、センサーデータとAIによる設備故障の予知保全、画像認識による外観検査、需要予測に基づく生産計画の最適化、製品品質の予測等でAIが活用されています。',
   },
   {
-    id: 200,
+    id: 6020,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AIのKPI（重要業績評価指標）」設定のポイントとして正しいものはどれか？',
@@ -262,7 +262,7 @@ export const businessQuestions: Question[] = [
     explanation: 'AIプロジェクトの成功を評価するには、ビジネスインパクト（売上増・コスト削減・CS向上等）とAI性能（精度・処理時間等）の両面からKPIを設定し、継続的にモニタリングすることが重要です。',
   },
   {
-    id: 201,
+    id: 6021,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AIの導入検討時にヒアリングすべきステークホルダー」として最も適切なものはどれか？',
@@ -275,7 +275,7 @@ export const businessQuestions: Question[] = [
     explanation: 'AI導入の成功には、ビジネス要件（現場担当者）、技術実現性（IT部門）、法令遵守（法務・コンプライアンス）、戦略的方向性（経営陣）、ユーザー体験（顧客）等多様な視点の統合が不可欠です。',
   },
   {
-    id: 202,
+    id: 6022,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AIプロジェクトの失敗要因」として最も頻繁に挙げられるものはどれか？',
@@ -288,7 +288,7 @@ export const businessQuestions: Question[] = [
     explanation: 'AIプロジェクトの失敗原因として、「AI for AI\'s sake（AIのためのAI）」的な導入、データの不足・品質問題、ユーザーの抵抗感、過度な期待と現実のギャップが頻繁に指摘されています。',
   },
   {
-    id: 203,
+    id: 6023,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AIアセスメント」とは何か？',
@@ -301,7 +301,7 @@ export const businessQuestions: Question[] = [
     explanation: 'AIアセスメント（影響評価）は、AIシステムが人権・プライバシー・公平性・安全性等に与える影響を事前に評価し、必要な軽減策を検討する手続きです。EU AI Act等で高リスクAIに義務付けられています。',
   },
   {
-    id: 204,
+    id: 6024,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '金融分野でのAI活用で特に重要なコンプライアンス要件として正しいものはどれか？',
@@ -314,7 +314,7 @@ export const businessQuestions: Question[] = [
     explanation: '金融分野では、与信判断や投資助言等のAI利用について、顧客への判断理由の説明（説明可能性）、監査軌跡の保持、データ品質の管理が法的に求められます。金融庁のAIガイドライン等で規定されています。',
   },
   {
-    id: 205,
+    id: 6025,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AIの democratization（民主化）」がビジネスに与える影響として正しいものはどれか？',
@@ -327,7 +327,7 @@ export const businessQuestions: Question[] = [
     explanation: 'AIの民主化により、OpenAI APIや各種AIプラットフォームを通じて、専門的なAI知識がない中小企業や個人でも高度なAI機能を利用できるようになり、ビジネスの競争環境が変化しています。',
   },
   {
-    id: 206,
+    id: 6026,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AIを活用した業務プロセス改革（BPR）」の進め方として正しいものはどれか？',
@@ -340,7 +340,7 @@ export const businessQuestions: Question[] = [
     explanation: 'AIを最大限活用するには、単に現行業務にAIを追加するのではなく、AIが得意なタスクと人間が得意なタスクを明確に分け、プロセス全体を再設計するBPRのアプローチが効果的です。',
   },
   {
-    id: 207,
+    id: 6027,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AIのヒューマン・イン・ザ・ループ（Human-in-the-loop）」とは何か？',
@@ -353,7 +353,7 @@ export const businessQuestions: Question[] = [
     explanation: 'Human-in-the-loopは、AIの自動化の中に人間の確認・修正ステップを組み込むアプローチで、AIの誤りの防止、品質の担保、倫理的配慮を両立させます。高リスク領域で特に重要です。',
   },
   {
-    id: 208,
+    id: 6028,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AIの導入事例評価」で重視すべきポイントとして正しいものはどれか？',
@@ -366,7 +366,7 @@ export const businessQuestions: Question[] = [
     explanation: '他社のAI導入事例を参考にする際は、業種・業務規模・データ環境・組織文化の違いを考慮し、自社の課題に本当に適合するかを冷静に評価することが重要です。成功と失敗の両面から学ぶ姿勢が求められます。',
   },
   {
-    id: 209,
+    id: 6029,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AI戦略策定」の最初のステップとして正しいものはどれか？',
@@ -379,7 +379,7 @@ export const businessQuestions: Question[] = [
     explanation: 'AI戦略の策定は、まず自社のビジネス課題を明確にし、その中でAIが解決に貢献できる領域を特定することから始まります。技術先行ではなく課題先行のアプローチが、成功確率を高めます。',
   },
   {
-    id: 210,
+    id: 6030,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: '「AI倫理審査委員会（AI Ethics Board）」の役割として正しいものはどれか？',
@@ -392,7 +392,7 @@ export const businessQuestions: Question[] = [
     explanation: 'AI倫理審査委員会は、AIシステムの公平性・透明性・プライバシー・安全性等を審査し、リスクが高い場合は導入の条件付・見送り等の判断を行う組織内のガバナンス機関です。多様な専門家の参加が望まれます。',
   },
   {
-    id: 219,
+    id: 6031,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: 'RAGをビジネスで活用するメリットとして最も適切なものはどれか？',
@@ -405,7 +405,7 @@ export const businessQuestions: Question[] = [
     explanation: 'RAGは社内の文書やナレッジベースを検索してLLMに補完情報を渡す手法であり、企業固有の情報に基づいた正確な回答を生成できることが最大のメリットです。',
   },
   {
-    id: 220,
+    id: 6032,
     category: 'business',
     categoryLabel: 'ビジネス活用',
     question: 'AIエージェントを業務に導入する際の注意点として適切なものはどれか？',

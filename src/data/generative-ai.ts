@@ -2,7 +2,7 @@ import type { Question } from '../core/types';
 
 export const generativeAiQuestions: Question[] = [
   {
-    id: 61,
+    id: 2001,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'Transformerアーキテクチャの核心的なメカニズムはどれか？',
@@ -15,7 +15,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'Transformerの自己注意機構は、入力系列の各要素間の関連性を並列に計算し、長距離依存関係を捉えることができます。2017年の「Attention Is All You Need」で提案されました。',
   },
   {
-    id: 62,
+    id: 2002,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '大規模言語モデル（LLM）の「事前学習（Pre-training）」で主に行われるタスクはどれか？',
@@ -28,7 +28,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'GPT系は次に続くトークンを予測する因果的言語モデリング、BERT系は一部をマスクして予測するマスク化言語モデリングを事前学習で行い、大量のテキストから言語のパターンを学習します。',
   },
   {
-    id: 63,
+    id: 2003,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「ファインチューニング（Fine-tuning）」とは何か？',
@@ -41,7 +41,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'ファインチューニングは、大規模データで事前学習済みのモデルを汎用的な言語知識を保持したまま、特定タスク（要約、翻訳等）向けに少量のデータで追加学習させる手法です。',
   },
   {
-    id: 64,
+    id: 2004,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'RAG（Retrieval-Augmented Generation）の説明として正しいものはどれか？',
@@ -54,7 +54,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'RAGは、ユーザー質問に関連する情報を外部データベース等から検索し、その情報をプロンプトに付加してLLMに回答させる手法です。ハルシネーション防止と最新情報の活用に有効です。',
   },
   {
-    id: 65,
+    id: 2005,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '拡散モデル（Diffusion Model）の生成プロセスとして正しいものはどれか？',
@@ -67,7 +67,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: '拡散モデルは、画像に段階的にノイズを加える（前拡散）学習と、ノイズから元の画像を復元する（逆拡散）生成を行います。Stable Diffusion等がこの手法を採用しています。',
   },
   {
-    id: 66,
+    id: 2006,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'GAN（Generative Adversarial Network）の構成要素の正しい組み合わせはどれか？',
@@ -80,7 +80,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'GANは、偽データを生成するジェネレータと、本物と偽物を識別するディスクリミネータが競合しながら学習する構造です。両者が改善し合うことで高品質な生成が可能になります。',
   },
   {
-    id: 67,
+    id: 2007,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'VAE（Variational Autoencoder）の特徴として正しいものはどれか？',
@@ -93,7 +93,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'VAEはエンコーダでデータを連続的な潜在空間に圧縮し、デコーダで復元する構造です。潜在空間が連続的で滑らかな補間が可能なため、意味的な変化を連続的に制御できます。',
   },
   {
-    id: 68,
+    id: 2008,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「マルチモーダルAI」とは何か？',
@@ -106,7 +106,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'マルチモーダルAIは、テキスト・画像・音声・動画など異なる種類のデータを統合的に理解・生成できるAIです。GPT-4oやGeminiが代表的な例です。',
   },
   {
-    id: 69,
+    id: 2009,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'トークナイザ（Tokenizer）の役割は何か？',
@@ -119,7 +119,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'トークナイザは、テキストをサブワード等の単位に分割し、各トークンを整数IDに変換する処理を行います。BPE（Byte Pair Encoding）が広く使われています。',
   },
   {
-    id: 70,
+    id: 2010,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'LoRA（Low-Rank Adaptation）の説明として正しいものはどれか？',
@@ -132,7 +132,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'LoRAは、事前学習済みモデルの重みを固定し、低ランクの小さな適応行列を追加してファインチューニングする手法です。元のモデルの約1%以下のパラメータで効率的に適応できます。',
   },
   {
-    id: 71,
+    id: 2011,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「エンベディング（Embedding）」とは何か？',
@@ -145,7 +145,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'エンベディングは、単語や文、画像などのデータを低次元の密な数値ベクトルに変換する手法です。意味的に似たデータはベクトル空間上で近い位置に配置されます。',
   },
   {
-    id: 72,
+    id: 2012,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「クラスタリング」と「ベクトル検索」の関係として正しいものはどれか？',
@@ -158,7 +158,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'ベクトル検索は、ベクトルデータベース上でクエリベクトルに近い（類似度の高い）ベクトルを高速に検索する技術です。RAGの情報検索ステップで不可欠です。',
   },
   {
-    id: 73,
+    id: 2013,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「テンペラチャ（Temperature）」パラメータの役割は何か？',
@@ -171,7 +171,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'テンペラチャはLLMの生成確率分布の鋭さを制御します。低いほど決定論的で一貫した出力になり、高いほど多様で創造的な出力になります。一般的に0.0〜2.0の範囲で設定します。',
   },
   {
-    id: 74,
+    id: 2014,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「インストラクション・チューニング」とは何か？',
@@ -184,7 +184,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'インストラクション・チューニングは、事前学習済みモデルに「次に続くテキスト」ではなく「指示に従って回答する」能力を教える追加訓練です。ChatGPT等の対話型AIに必須の技術です。',
   },
   {
-    id: 75,
+    id: 2015,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「人間からのフィードバックによる強化学習（RLHF）」の目的は何か？',
@@ -197,7 +197,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'RLHFは、人間のフィードバックを報酬信号として強化学習を行い、AIの出力が有用・安全・誠実であるよう調整する手法です。ChatGPTの対話品質向上に大きく貢献しました。',
   },
   {
-    id: 76,
+    id: 2016,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「量子化（Quantization）」のAIモデルにおける説明として正しいものはどれか？',
@@ -210,7 +210,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: '量子化は、モデルの重みパラメータを高精度（FP32等）から低精度（INT8、INT4等）に変換する手法です。モデルサイズと推論速度が大幅に削減され、エッジデバイスでの実行が可能になります。',
   },
   {
-    id: 77,
+    id: 2017,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「オープエンド生成（Open-ended Generation）」の特徴はどれか？',
@@ -223,7 +223,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'オープエンド生成は、LLMが入力プロンプトに対して制約のない自由形式のテキストを生成する能力です。翻訳や要約等の特定タスクだけでなく、会話や文章作成等の幅広い応用を可能にします。',
   },
   {
-    id: 78,
+    id: 2018,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「コンテキストウィンドウ」とは何か？',
@@ -236,7 +236,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'コンテキストウィンドウは、LLMが一つの対話や処理で参照できるトークンの最大数です。例えば128Kトークン等で、長文の理解や多数の文書を含むRAGで重要な指標です。',
   },
   {
-    id: 79,
+    id: 2019,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「CLIP」モデルの特徴として正しいものはどれか？',
@@ -249,7 +249,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'CLIP（Contrastive Language-Image Pre-training）は、画像とテキストを同じベクトル空間に配置し、テキストで画像を検索・制御できるようにしたOpenAIのモデルです。Stable Diffusion等でも活用されています。',
   },
   {
-    id: 80,
+    id: 2020,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「エージェント」としてのLLMの説明として正しいものはどれか？',
@@ -262,7 +262,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'AIエージェントは、LLMが推論能力を使ってタスクを計画・分割し、Web検索やAPI呼び出し等の外部ツールを利用しながら自律的に目標を達成するシステムです。AutoGPT等が代表例です。',
   },
   {
-    id: 81,
+    id: 2021,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「ディコーダーのみ（Decoder-only）」モデルの代表例はどれか？',
@@ -275,7 +275,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'GPTシリーズはディコーダーのみのTransformerアーキテクチャで、自己回帰的に次トークンを生成します。対してBERTはエンコーダーのみ、T5はエンコーダー・ディコーダー構造です。',
   },
   {
-    id: 82,
+    id: 2022,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「フラッシュアテンション（Flash Attention）」の目的は何か？',
@@ -288,7 +288,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'フラッシュアテンションは、自己注意機構の計算をIO認識型アルゴリズムで最適化し、計算速度の向上とメモリ使用量の削減を同時に実現する手法です。長いコンテキストの処理で効果を発揮します。',
   },
   {
-    id: 83,
+    id: 2023,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「蒸留（Distillation）」のAIモデルにおける説明として正しいものはどれか？',
@@ -301,7 +301,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: '知識蒸留は、大規模な教師モデルが学習した知識（ソフトラベル等）を小規模な生徒モデルに転移させ、軽量でありながら高性能なモデルを作成する手法です。',
   },
   {
-    id: 84,
+    id: 2024,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「マルチヘッド注意機構（Multi-Head Attention）」の利点はどれか？',
@@ -314,7 +314,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'マルチヘッド注意機構は、複数の「ヘッド」で並列に異なる注意パターンを計算し、結合することで、文法・意味・文脈等の多様な関係性を同時に捉えることができます。',
   },
   {
-    id: 85,
+    id: 2025,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「位置エンコーディング（Positional Encoding）」はなぜ必要か？',
@@ -327,7 +327,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'Transformerの自己注意機構は入力の順序を考慮しないため、位置エンコーディングで各トークンの位置情報を付加する必要があります。従来はサイン・コサイン関数、最近は学習可能な位置埋め込みが主流です。',
   },
   {
-    id: 86,
+    id: 2026,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「フューショット（Few-shot）推論」の説明として正しいものはどれか？',
@@ -340,7 +340,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'フューショット推論は、プロンプトに数個の入力と出力の例を含めることで、ファインチューニングなしにLLMにタスクの形式や内容を理解させる手法です。',
   },
   {
-    id: 87,
+    id: 2027,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「DALL-E」のベースとなる生成技術はどれか？',
@@ -353,7 +353,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'DALL-E 2とDALL-E 3は、テキストから画像を生成するために拡散モデルを採用しています。特にDALL-E 3は、CLIPと拡散モデルを組み合わせたアーキテクチャを使用しています。',
   },
   {
-    id: 88,
+    id: 2028,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「Whisper」モデルの機能として正しいものはどれか？',
@@ -366,7 +366,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'WhisperはOpenAIが開発した音声認識モデルで、多言語の音声データからテキストへの書き起こし（ Automatic Speech Recognition）と翻訳を行います。',
   },
   {
-    id: 89,
+    id: 2029,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「マルチモーダル」と「ユニモーダル」の違いとして正しいものはどれか？',
@@ -379,7 +379,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'マルチモーダルAIはテキスト・画像・音声など複数のデータ形式を統合的に処理できるのに対し、ユニモーダルAIはテキストのみや画像のみなど単一のデータ種類に特化しています。',
   },
   {
-    id: 90,
+    id: 2030,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '「 Synthetic Data（合成データ）」の生成AIにおける利点として正しいものはどれか？',
@@ -392,7 +392,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: '合成データはAIで人工的に生成したデータで、実データの収集が困難・高コストな場面や、個人情報保護の観点から実データを使用できない場面で学習データの補完に活用されます。',
   },
   {
-    id: 211,
+    id: 2031,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'RAG（検索拡張生成）の説明として最も適切なものはどれか？',
@@ -405,7 +405,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'RAGは、ユーザーの質問に関連する情報を外部のナレッジベースから検索し、その情報をプロンプトに組み込んでLLMに回答させる手法です。ハルシネーションの軽減と最新情報の活用に効果的です。',
   },
   {
-    id: 212,
+    id: 2032,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '2025年に公布された「AI新法」の正しい説明はどれか？',
@@ -418,7 +418,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'AI新法（人工知能関連技術の研究開発及び活用の推進に関する法律）は、AIの利用を規制するものではなく、研究開発と活用を国家戦略として推進する法律です。2025年6月に公布されました。',
   },
   {
-    id: 213,
+    id: 2033,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'ChatGPTを開発したOpenAIの最新モデルとして、推論能力が大幅に向上したものはどれか？',
@@ -431,7 +431,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'GPT-5はOpenAIの大規模言語モデルの最新版で、推論能力が大幅に向上しています。GPT-oシリーズ（o1、o3、o4）も推論特化モデルとして展開されています。',
   },
   {
-    id: 214,
+    id: 2034,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '画像認識AIの基本モデルとして最も適切なものはどれか？',
@@ -444,7 +444,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'CNN（Convolutional Neural Network）は画像認識に特化したニューラルネットワークで、畳み込み層とプーリング層で画像の特徴を抽出します。ResNetやVGGが代表例です。',
   },
   {
-    id: 215,
+    id: 2035,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'GAN（Generative Adversarial Network）について不適切な説明はどれか？',
@@ -457,7 +457,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'GANはデータの生成を目的としたモデルであり、画像分類はGANの主目的ではありません。画像分類にはCNNなどが使用されます。GANはジェネレータが偽データを生成し、ディスクリミネータが本物と偽物を判別する構造です。',
   },
   {
-    id: 216,
+    id: 2036,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'Multi-Modalモデルの構成として不適切なものはどれか？',
@@ -470,7 +470,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'Multi-Modalモデルは複数種類のデータ（テキスト・画像・音声など）を統合処理するAIモデルです。特定の限定的な情報（色情報だけ）のみを処理するものはMulti-Modalモデルとは呼ばれません。',
   },
   {
-    id: 217,
+    id: 2037,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'VAE（変分自己符号化器）について不適切な説明はどれか？',
@@ -483,7 +483,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'VAEは主に画像生成に利用される生成モデルであり、自然言語処理タスクが主な用途ではありません。LLMやBERTなどが自然言語処理に使用されます。',
   },
   {
-    id: 218,
+    id: 2038,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'UL2Rについて不適切な説明はどれか？',
@@ -496,7 +496,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'UL2Rは言語モデルの事前学習パラダイムであり、音声認識が主目的ではありません。音声認識にはWhisperなどの専用モデルが使用されます。',
   },
   {
-    id: 219,
+    id: 2039,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'Transformerの構成要素として不適切なものはどれか？',
@@ -509,7 +509,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: '動的コンパイルはコンピュータサイエンスの一般的な最適化技法であり、Transformerの構成要素ではありません。TransformerはSelf-Attention、マルチヘッド注意機構、フィードフォワード層などで構成されます。',
   },
   {
-    id: 220,
+    id: 2040,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '生成AIに分類されない技術はどれか？',
@@ -522,7 +522,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'Wi-Fiスキャニングはネットワーク通信技術であり、新たなコンテンツを生成するAIではないため生成AIに分類されません。テキスト・画像・音楽などのコンテンツ生成が生成AIの対象です。',
   },
   {
-    id: 221,
+    id: 2041,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'エンコーダの役割として正しいものはどれか？',
@@ -535,7 +535,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'エンコーダはデータを圧縮し、潜在空間に変換するネットワーク構造です。デコーダがその逆変換を行い、元のデータを復元します。VAE等の生成モデルで使用されます。',
   },
   {
-    id: 222,
+    id: 2042,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'エンコーダから圧縮されたデータを復元するネットワーク構造は何か？',
@@ -548,7 +548,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'デコーダはエンコーダで圧縮されたデータを復元（復号）するネットワーク構造です。エンコーダ・デコーダのペアはVAE等で使用されます。',
   },
   {
-    id: 223,
+    id: 2043,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '潜在空間にデータを変換して処理を行うベクトルは何と呼ばれるか？',
@@ -561,7 +561,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: '潜在ベクトルは潜在空間にデータを変換して処理を行うベクトルです。エンコーダによって生成され、データの特徴を低次元で表現します。',
   },
   {
-    id: 224,
+    id: 2044,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'OpenAIが2024年2月に発表した動画生成AIモデルは何か？',
@@ -574,7 +574,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'SoraはOpenAIが2024年2月に発表した動画生成AIモデルで、テキストから高品質な動画を生成できます。',
   },
   {
-    id: 225,
+    id: 2045,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '2025年5月のGoogle I/Oで発表された音声と映像を同時に生成できる動画生成AIモデルは何か？',
@@ -587,7 +587,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'Veo3は2025年5月のGoogle I/Oで発表された音声と映像を同時に生成できる高品質な動画生成AIモデルです。',
   },
   {
-    id: 226,
+    id: 2046,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '過去のデータを元に未来のデータを予測するモデルで、多くのLLMで利用されているものは何か？',
@@ -600,7 +600,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: '自己回帰モデルは過去のデータを元に未来のデータを予測するモデルで、多くのLLMや画像生成モデルで利用されています。GPTも自己回帰モデルです。',
   },
   {
-    id: 227,
+    id: 2047,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'コンピューターが人間の言語を理解・処理するための技術分野は何か？',
@@ -613,7 +613,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: '自然言語処理（NLP）はコンピューターが人間の言語を理解・処理するための技術分野です。機械翻訳、文書要約、対話システム等に応用されます。',
   },
   {
-    id: 228,
+    id: 2048,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '2018年10月にGoogleが開発した、Transformerベースで事前学習された自然言語処理モデルは何か？',
@@ -626,7 +626,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'BERTは2018年10月にGoogleが開発したTransformerベースの自然言語処理モデルで、MLMとNSPによる事前学習を行い、双方向コンテキストの理解に優れます。',
   },
   {
-    id: 229,
+    id: 2049,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'BERTで用いられる単語の一部をマスクして学習する方式は何か？',
@@ -639,7 +639,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'MLM（Masked Language Modeling）はBERTで用いられる方式で、単語の一部をマスクして文脈から欠落語を予測させます。',
   },
   {
-    id: 230,
+    id: 2050,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'BERTで用いられる次に来る文を予測するタスクは何か？',
@@ -652,7 +652,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'NSP（Next Sentence Prediction）はBERTで用いられるタスクで、2文間の論理的関係性を学習するために次に来る文を予測させます。',
   },
   {
-    id: 231,
+    id: 2051,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '2019年にFacebook AIが開発したBERTの改良版モデルは何か？',
@@ -665,7 +665,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'RoBERTaは2019年にFacebook AIが開発したBERTの改良版で、事前学習方法の最適化により性能が向上しています。',
   },
   {
-    id: 232,
+    id: 2052,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'Googleが開発したBERTを軽量化したモデルで効率的な学習を可能にしたものは何か？',
@@ -678,7 +678,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'ALBERTはGoogleが開発したBERTの軽量化モデルで、パラメータ数を削減しつつ効率的な学習を可能にしています。',
   },
   {
-    id: 233,
+    id: 2053,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: 'Anthropicが2024年に提唱した、AIエージェントやLLMが外部のツールやデータソースと連携するためのプロトコルは何か？',
@@ -691,7 +691,7 @@ export const generativeAiQuestions: Question[] = [
     explanation: 'MCPはAnthropicが2024年に提唱したプロトコルで、AIエージェントやLLMが外部のツールやデータソースと連携するための標準規格です。',
   },
   {
-    id: 234,
+    id: 2054,
     category: 'generative_ai',
     categoryLabel: '生成AIの仕組み',
     question: '大きなテキストデータを意味や文脈を考慮して扱いやすい小さな塊に分割したものは何と呼ばれるか？',

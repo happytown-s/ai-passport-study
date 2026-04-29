@@ -2,7 +2,7 @@ import type { Question } from '../core/types';
 
 export const aiRisksQuestions: Question[] = [
   {
-    id: 121,
+    id: 4001,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「ハルシネーション」とは何か？',
@@ -15,7 +15,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'ハルシネーションは、LLMがもっともらしいが事実と異なる情報を生成する現象です。学習データのパターンに基づく確率的生成の性質上、完全には排除できず、人間による検証が必要です。',
   },
   {
-    id: 122,
+    id: 4002,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: 'AIの「バイアス（偏り）」の原因として最も適切なものはどれか？',
@@ -28,7 +28,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'AIのバイアスは、学習データに偏り（性別・人種・年齢等の不均衡やステレオタイプ）がある場合、その偏りを学習・増幅してしまう問題です。採用AIでの差別的判定等が報告されています。',
   },
   {
-    id: 123,
+    id: 4003,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「ディープフェイク（Deepfake）」の主な社会的リスクとして正しいものはどれか？',
@@ -41,7 +41,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'ディープフェイクは、生成AIで作成された偽の映像・音声・画像で、著名人の発言の偽造や詐欺・ポルノ等の悪用が社会問題化しています。対策技術の開発も進められています。',
   },
   {
-    id: 124,
+    id: 4004,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「フェイクニュース」とAIの関係で正しいものはどれか？',
@@ -54,7 +54,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: '生成AIの発展により、自然で説得力のある偽記事や偽情報が大量かつ低コストで作成可能になりました。SNSでの拡散と相まって、情報の信頼性判断がますます困難になっています。',
   },
   {
-    id: 125,
+    id: 4005,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: 'AIの「ブラックボックス問題」とは何か？',
@@ -67,7 +67,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'ブラックボックス問題は、深層学習等の複雑なモデルで、なぜその判断に至ったかの根拠を人間が理解・説明できない問題です。医療・金融等の重要な意思決定で重大な課題となっています。',
   },
   {
-    id: 126,
+    id: 4006,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「XAI（Explainable AI：説明可能なAI）」の目的は何か？',
@@ -80,7 +80,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'XAIは、AIの判断根拠を人間に理解可能な形で提示する技術・アプローチで、SHAP値やLIME等の手法が使われます。信頼性向上と法的要件への対応に重要です。',
   },
   {
-    id: 127,
+    id: 4007,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: 'AIシステムが「プライバシー侵害」を引き起こす典型的な例はどれか？',
@@ -93,7 +93,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'LLMが学習データ中の個人情報（氏名・住所・電話番号等）をそのまま出力してしまう「記憶漏洩」がプライバシー侵害のリスクです。データの匿名化やフィルタリング等の対策が必要です。',
   },
   {
-    id: 128,
+    id: 4008,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「データポイズニング」とは何か？',
@@ -106,7 +106,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'データポイズニングは、AIの学習データに巧妙に細工されたデータを混入させ、モデルの挙動を攻撃者が意図した方向に誘導する攻撃手法です。フィルタリング・異常検知等が対策として有効です。',
   },
   {
-    id: 129,
+    id: 4009,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: 'AIの「悪用（Misuse）」の例として正しいものはどれか？',
@@ -119,7 +119,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: '生成AIはフィッシング詐欺メールの作成、マルウェアのコード生成、ディープフェイク等の悪用リスクを持ちます。利用者の倫理意識と技術的・法的対策の両面から対処が必要です。',
   },
   {
-    id: 130,
+    id: 4010,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「AI倫理ガイドライン」に共通して含まれる原則として正しいものはどれか？',
@@ -132,7 +132,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: '日本のAI戦略、OECDのAI原則、EUのAI倫理ガイドライン等に共通する基本原則は、人間中心・透明性・公平性・安全性・説明責任等です。技術的な詳細は国や組織で異なります。',
   },
   {
-    id: 131,
+    id: 4011,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「アルゴリズム・トランスパレンシー」とは何か？',
@@ -145,7 +145,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'アルゴリズム・トランスパレンシーは、AIの判断プロセスや使用データ、評価結果等を開示し、利用者や社会がAIの動作を理解・監視できるようにする透明性確保の原則です。',
   },
   {
-    id: 132,
+    id: 4012,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「サステナブルAI（Sustainable AI）」が考慮すべき要素として正しいものはどれか？',
@@ -158,7 +158,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'サステナブルAIは、大規模モデルの学習に膨大な電力が消費される問題に注目し、環境負荷の低減・効率的なモデル設計・再生可能エネルギーの利用等を推進する概念です。',
   },
   {
-    id: 133,
+    id: 4013,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「AIセーフティ（AI Safety）」が主に懸念するリスクはどれか？',
@@ -171,7 +171,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'AIセーフティは、AIが人間の価値観や意図に沿って行動するか（アライメント問題）、AGIの存在的リスク、自律型AIの安全性等を研究分野として扱います。技術的・ガバナンス両面からのアプローチが求められます。',
   },
   {
-    id: 134,
+    id: 4014,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「アドバーサリアル攻撃（Adversarial Attack）」とは何か？',
@@ -184,7 +184,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'アドバーサリアル攻撃は、入力画像等に人間には不可視な微細なノイズを加えることで、AIを誤分類させる攻撃です。自動運転やセキュリティ等のAIシステムで深刻なリスクとなります。',
   },
   {
-    id: 135,
+    id: 4015,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「過度依存（Over-reliance）」のAI利用におけるリスクとして正しいものはどれか？',
@@ -197,7 +197,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'AIへの過度依存は、ユーザーが自らの判断や検証を放棄し、誤ったAI出力をそのまま拡散・採用するリスクです。「Human-in-the-loop（人間の介在）」の原則が重要です。',
   },
   {
-    id: 136,
+    id: 4016,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「情報フィルターバブル（Filter Bubble）」とAIの関係で正しいものはどれか？',
@@ -210,7 +210,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: '推薦アルゴリズムがユーザーの過去の行動に基づいて情報をフィルタリングし、自分の意見と似た情報ばかりが表示される現象です。社会の分断や偏見の助長リスクが指摘されています。',
   },
   {
-    id: 137,
+    id: 4017,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「AIの雇用への影響」に関する記述で正しいものはどれか？',
@@ -223,7 +223,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'OECDやWHO等の報告では、事務作業やデータ入力等の定型的業務は代替リスクが高い一方で、AIオペレーターやAI倫理担当等の新職種創出や、生産性向上による経済効果も指摘されています。',
   },
   {
-    id: 138,
+    id: 4018,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「モデルの抽出攻撃（Model Extraction）」とは何か？',
@@ -236,7 +236,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'モデル抽出攻撃は、公開API経由で大量のクエリを送信し、その入出力から元のモデルの振る舞いを模倣した代替モデルを構築する攻撃です。知的財産の侵害に繋がります。',
   },
   {
-    id: 139,
+    id: 4019,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「デジタル・ディバイド」とAIの関係で正しいものはどれか？',
@@ -249,7 +249,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'AI技術の利用には計算資源・データ・スキル等が必要で、これらへのアクセス格差がデジタル・ディバイドを拡大するリスクがあります。先進国と開発途上国、大企業と中小企業間の格差が懸念されます。',
   },
   {
-    id: 140,
+    id: 4020,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「人間中心のAI（Human-centric AI）」の基本思想として正しいものはどれか？',
@@ -262,7 +262,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: '人間中心のAIは、OECDのAI原則や日本のAI戦略の中核にある思想で、AIは人間の権利・自由・尊厳を尊重し、社会の課題解決と人間の福祉向上に貢献すべきとする考え方です。',
   },
   {
-    id: 141,
+    id: 4021,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「アライメント（Alignment）問題」とは何か？',
@@ -275,7 +275,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'アライメント問題は、高度なAIが人間の意図を正しく理解・実行せず、意図しない有害な結果をもたらすリスクです。RLHF等の技術的アプローチとガバナンス両面からの対処が研究されています。',
   },
   {
-    id: 142,
+    id: 4022,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: 'AIシステムの「監査（Audit）」の目的として正しいものはどれか？',
@@ -288,7 +288,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'AI監査は、AIシステムのバイアス・リスク・コンプライアンスを第三者的に評価する仕組みで、EU AI Act等でも求められています。アルゴリズム影響評価（AIA）が具体的手法の一つです。',
   },
   {
-    id: 143,
+    id: 4023,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「ソーシャル・エンジニアリング」攻撃において生成AIが果たす役割として危険なものはどれか？',
@@ -301,7 +301,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: '生成AIは、人間の言葉遣いを模倣した自然で説得力のあるフィッシングメールや偽のカスタマーサポート対応等を大量生成でき、ソーシャル・エンジニアリング攻撃の高度化・大規模化を招いています。',
   },
   {
-    id: 144,
+    id: 4024,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「責任帰属（Accountability）」のAI判断の問題として正しいものはどれか？',
@@ -314,7 +314,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'AIが自動運転や医療診断等で誤った判断をした場合、開発者・提供者・利用者の誰が責任を負うかが法的に未整理な部分があり、ガイドライン整備と法的枠組みの構築が求められています。',
   },
   {
-    id: 145,
+    id: 4025,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「コンテンツモデレーション」でAIを活用する際の課題として正しいものはどれか？',
@@ -327,7 +327,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'AIによるコンテンツモデレーションでは、有害コンテンツの見逃しと健全なコンテンツの誤削除（過剰モデレーション）の両方を最小化するバランスが求められます。人間による監督と併用が一般的です。',
   },
   {
-    id: 146,
+    id: 4026,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「メンバーインバージョン攻撃（Membership Inference Attack）」とは何か？',
@@ -340,7 +340,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'メンバーインバージョン攻撃は、AIの振る舞いから特定個人のデータが学習データセットに含まれているかを推測する攻撃です。医療データ等の機密性の高いデータで深刻なプライバシーリスクとなります。',
   },
   {
-    id: 147,
+    id: 4027,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「AIのオープンソース化」に関する意見としてバランスが取れているものはどれか？',
@@ -353,7 +353,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'AIのオープンソース化は研究の透明性と民主化を促進する一方で、悪用リスクも高めます。MetaのLlama等は段階的公開や利用規約による制約を設けるなど、リスクとベネフィットのバランスが議論されています。',
   },
   {
-    id: 148,
+    id: 4028,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「AIウォーターマーク（Watermarking）」の目的として正しいものはどれか？',
@@ -366,7 +366,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'AIウォーターマークは、AI生成コンテンツに人間には認識しにくいが機械的に検出可能なマークを埋め込み、フェイクニュースやディープフェイクの識別に役立てる技術です。各国で標準化が議論されています。',
   },
   {
-    id: 149,
+    id: 4029,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「自律型致死兵器（LAWS）」に関する国際的な懸念として正しいものはどれか？',
@@ -379,7 +379,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'LAWS（Lethal Autonomous Weapons Systems）は、人間の介在なしに標的の選択と攻撃を自律的に行う兵器で、国連等で倫理的・法的な議論が続いています。全面的な禁止を求める声と規制案が対立しています。',
   },
   {
-    id: 150,
+    id: 4030,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '「AI Literacy（AIリテラシー）」の重要性として正しいものはどれか？',
@@ -392,7 +392,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'AIリテラシーは、AIの仕組み・可能性・限界・リスクを理解し、情報の真偽を判断して適切に活用する能力です。生成AIの普及により、専門家だけでなく一般社会全体に求められる必須スキルとなっています。',
   },
   {
-    id: 216,
+    id: 4031,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: 'シャドーAIの説明として最も適切なものはどれか？',
@@ -405,7 +405,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'シャドーAIは、企業が正式に承認・管理していないAIツールを従業員が個人的に業務で使用することです。機密情報の漏洩やコンプライアンス違反などの重大なリスクを伴います。',
   },
   {
-    id: 217,
+    id: 4032,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '2025年3月に改訂された「AI事業者ガイドライン」で定められているものはどれか？',
@@ -418,7 +418,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'AI事業者ガイドライン（第1.1版）は、AIの開発・提供・利用に関わる事業者が遵守すべき基本原則を定めた指針です。開発者・提供者・利用者の3つの主体に応じた責任が規定されています。',
   },
   {
-    id: 218,
+    id: 4033,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: 'ディープフェイクで特に注意が必要な使用目的はどれか？',
@@ -431,7 +431,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'ディープフェイクの最も深刻なリスクは、故意に人を欺く目的での使用です。詐欺、誤情報拡散、なりすましなどの悪用が大きな社会問題となっています。GANやVAEなどの生成技術が基盤となっています。',
   },
   {
-    id: 219,
+    id: 4034,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '生成AIの倫理的課題に該当しないものはどれか？',
@@ -444,7 +444,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'プロンプト技術の発展は技術的進歩であり、倫理的課題ではありません。ハルシネーション、バイアス、プライバシー侵害などが生成AIの倫理的課題として挙げられます。',
   },
   {
-    id: 220,
+    id: 4035,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: 'SMSを悪用して偽サイトへ誘導する攻撃は何と呼ばれるか？',
@@ -457,7 +457,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'スミッシング（Smishing）はSMS（ショートメッセージサービス）を悪用して偽サイトへ誘導する攻撃手法です。SMSフィッシングの一種です。',
   },
   {
-    id: 221,
+    id: 4036,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '音声通話を利用したフィッシング詐欺は何と呼ばれるか？',
@@ -470,7 +470,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'ビッシング（Vishing）は音声通話を利用したフィッシング詐欺です。偽の電話で個人情報や金銭を盗み取る攻撃手法です。',
   },
   {
-    id: 222,
+    id: 4037,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: 'データを暗号化し身代金の支払いを要求する攻撃は何か？',
@@ -483,7 +483,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'ランサムウェアはデータを暗号化し身代金（ランサム）の支払いを要求するマルウェアの一種です。近年深刻な被害が増加しています。',
   },
   {
-    id: 223,
+    id: 4038,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: 'ソーシャルエンジニアリング攻撃のうち、特定の人物や組織を標的にしたフィッシングは何か？',
@@ -496,7 +496,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'スピアフィッシング（Spear Phishing）は特定の人物や組織を標的にしたフィッシング攻撃です。標的型攻撃とも呼ばれ、一般的なフィッシングより成功率が高いです。',
   },
   {
-    id: 224,
+    id: 4039,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: 'ソーシャルエンジニアリング攻撃のうち、人間の好奇心や物欲を利用してマルウェア感染を誘う攻撃は何か？',
@@ -509,7 +509,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'ベイト攻撃は人間の好奇心や物欲・不安を利用してマルウェア感染や個人情報摂取を誘うソーシャルエンジニアリング攻撃です。',
   },
   {
-    id: 225,
+    id: 4040,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '脅迫によって金銭や情報を要求するソーシャルエンジニアリング攻撃は何か？',
@@ -522,7 +522,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'ブラックメールは脅迫によって金銭や情報を要求するソーシャルエンジニアリング攻撃です。',
   },
   {
-    id: 226,
+    id: 4041,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '信用を得るために偽の身分や状況を作り出す攻撃手口は何か？',
@@ -535,7 +535,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: 'プレテキスト攻撃は信用を得るために偽の身分や状況を作り出すソーシャルエンジニアリング攻撃です。例えば、IT部門のスタッフを装って従業員から情報を聞き出す等の手口があります。',
   },
   {
-    id: 227,
+    id: 4042,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: 'AI利用で環境への影響を評価する取り組みは何か？',
@@ -548,7 +548,7 @@ export const aiRisksQuestions: Question[] = [
     explanation: '環境リスク分析はAI利用で環境への影響を評価する取り組みです。大規模モデルの学習・運用に伴う電力消費やCO2排出等を分析します。',
   },
   {
-    id: 228,
+    id: 4043,
     category: 'ai_risks',
     categoryLabel: 'AIのリスク・倫理',
     question: '情報の一部を不正閲覧から保護するために隠して表示する方法は何か？',

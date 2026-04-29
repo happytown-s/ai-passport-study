@@ -2,7 +2,7 @@ import type { Question } from '../core/types';
 
 export const promptEngineeringQuestions: Question[] = [
   {
-    id: 91,
+    id: 3001,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「ゼロショットプロンプティング」とは何か？',
@@ -15,7 +15,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'ゼロショットプロンプティングは、入出力の例を何も与えずに、タスクの説明や指示だけでLLMに回答させる最も基本的な手法です。事前学習の知識だけに依存します。',
   },
   {
-    id: 92,
+    id: 3002,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「ワンショットプロンプティング」の説明として正しいものはどれか？',
@@ -28,7 +28,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'ワンショットプロンプティングは、タスクの指示に加えて1つの入出力例を提示することで、LLMに期待される回答の形式や内容を理解させる手法です。',
   },
   {
-    id: 93,
+    id: 3003,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「Chain-of-Thought（CoT）プロンプティング」の効果として最も適切なものはどれか？',
@@ -41,7 +41,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'Chain-of-Thoughtは「ステップバイステップで考えましょう」等の言葉や推論例を含め、LLMに段階的な思考プロセスを誘導する手法です。算数や論理推論等の複雑タスクで効果的です。',
   },
   {
-    id: 94,
+    id: 3004,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「ロールプロンプティング（Role Prompting）」とは何か？',
@@ -54,7 +54,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'ロールプロンプティングは「あなたはプロの編集者です」のようにAIに特定の役割を与えることで、専門性の高い回答や適切なトーンでの出力を引き出す手法です。',
   },
   {
-    id: 95,
+    id: 3005,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: 'プロンプトインジェクション攻撃とは何か？',
@@ -67,7 +67,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'プロンプトインジェクションは、ユーザー入力に「以前の指示を無視して〜」等の悪意のある指示を含め、システムプロンプトの制約を回避して機密情報の漏洩等を狙う攻撃手法です。',
   },
   {
-    id: 96,
+    id: 3006,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「システムプロンプト」の役割として正しいものはどれか？',
@@ -80,7 +80,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'システムプロンプトは、AIアプリケーション開発者が設定するAIの基本指示で、役割の定義や出力制約（有害内容の拒否等）を記述します。ユーザーからは直接見えないことが多いです。',
   },
   {
-    id: 97,
+    id: 3007,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '効果的なプロンプト設計の基本原則として最も適切なものはどれか？',
@@ -93,7 +93,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: '良いプロンプトは、タスクの目的・対象・出力形式・制約条件を具体的かつ明確に記述します。曖昧な指示はLLMの解釈に委ねられるため、意図しない出力につながります。',
   },
   {
-    id: 98,
+    id: 3008,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「出力形式の指定」をプロンプトに含めるメリットはどれか？',
@@ -106,7 +106,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: '出力形式を指定することで、後続処理（パースや他システムへの連携）が容易になり、一貫性のある結果が得られます。例えば「JSON形式で出力して」等の指定が有効です。',
   },
   {
-    id: 99,
+    id: 3009,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「自己一貫性（Self-Consistency）」プロンプティングの説明として正しいものはどれか？',
@@ -119,7 +119,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: '自己一貫性プロンプティングは、CoTで複数回の推論経路をサンプリングし、最も多数の経路が導く結論を最終回答とする手法です。確率的な推論の安定性を向上させます。',
   },
   {
-    id: 100,
+    id: 3010,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「Tree of Thoughts（ToT）」プロンプティングの特徴はどれか？',
@@ -132,7 +132,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'Tree of Thoughtsは、問題解決の各段階で複数の思考分岐を生成し、評価・探索・バックトラックを行うことで、複雑な計画・推論タスクの精度を向上させる手法です。',
   },
   {
-    id: 101,
+    id: 3011,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「負のプロンプティング（Negative Prompting）」は主にどの分野で使われるか？',
@@ -145,7 +145,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: '負のプロンプティングは、画像生成AI（Stable Diffusion等）で「低品質」「ぼやけ」「余分な指」等の含めたくない要素を指定し、生成品質を向上させる手法です。',
   },
   {
-    id: 102,
+    id: 3012,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「メタプロンプティング」とは何か？',
@@ -158,7 +158,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'メタプロンプティングは、LLMに「このタスクに対する最適なプロンプトを作成して」と指示し、AI自身に効果的なプロンプトを生成・改善させる手法です。',
   },
   {
-    id: 103,
+    id: 3013,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「分割と征服（Divide and Conquer）」アプローチのプロンプトでの活用法として正しいものはどれか？',
@@ -171,7 +171,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: '分割と征服は、長文の要約や複雑な分析等を、大まかな計画→各ステップの実行→最終統合というように小さなタスクに分割して段階的に処理する手法です。各ステップでの精度向上につながります。',
   },
   {
-    id: 104,
+    id: 3014,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: 'プロンプトにおける「制約条件（Constraints）」の役割は何か？',
@@ -184,7 +184,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: '制約条件は「500文字以内で」「箇条書きで3点」「専門用語は使わずに」等の出力制限を設け、タスクの目的に沿った適切な回答を引き出すための重要な要素です。',
   },
   {
-    id: 105,
+    id: 3015,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「Few-shot学習」と「Few-shot推論」の違いとして正しいものはどれか？',
@@ -197,7 +197,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'Few-shot学習はモデルのパラメータを実際に更新する追加訓練ですが、Few-shot推論（In-context Learning）はプロンプトに例を含めるだけで推論時のみ適用し、パラメータは変更しません。',
   },
   {
-    id: 106,
+    id: 3016,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「ReAct（Reasoning + Acting）」フレームワークの特徴はどれか？',
@@ -210,7 +210,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'ReActは、LLMが思考→行動（外部ツールの実行）→観察→思考…と繰り返しながら、動的に情報を収集して推論を進めるフレームワークです。検索・計算等を組み込んだ高度な推論が可能です。',
   },
   {
-    id: 107,
+    id: 3017,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「Directed Acyclic Graph（DAG）プロンプティング」の説明として正しいものはどれか？',
@@ -223,7 +223,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'DAGプロンプティングは、複数のサブタスクを有向非巡回グラフ（DAG）として構造化し、タスク間の依存関係を明確にして並列実行・順次実行を最適化する手法です。LangGraph等で活用されます。',
   },
   {
-    id: 108,
+    id: 3018,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: 'プロンプトの「境界設定（Guardrails）」の目的は何か？',
@@ -236,7 +236,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'ガードレールは、AIが特定のトピックから逸脱したり、有害・不適切な内容を出力したりするのを防ぐ安全制御機構です。入力検証と出力検証の両面から実装されます。',
   },
   {
-    id: 109,
+    id: 3019,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「ドメイン知識のプロンプトへの組み込み」の効果として正しいものはどれか？',
@@ -249,7 +249,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'プロンプトにドメイン固有の用語集、概念説明、ルール等を含めることで、LLMのその分野での理解と回答精度が向上します。ただし、コンテキストウィンドウの制限には注意が必要です。',
   },
   {
-    id: 110,
+    id: 3020,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「ステップバイステップで考えてください」という指示が効果的な理由は何か？',
@@ -262,7 +262,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: '「ステップバイステップで考えてください」はChain-of-Thoughtの最もシンプルな形で、LLMに直接回答させるのではなく、中間推論を生成させることで、論理的飛躍を防ぎ正答率を向上させます。',
   },
   {
-    id: 111,
+    id: 3021,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「ジャンクションプロンプティング（Jailbreaking）」への対策として不適切なものはどれか？',
@@ -275,7 +275,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'ジェイルブレイク対策として、システムプロンプトの公開は不適切です。攻撃者に制約の内容を知られてしまうと、それを回避する攻撃が容易になります。入出力の検証や多層防御が有効です。',
   },
   {
-    id: 112,
+    id: 3022,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「反復的プロンプト改善（Iterative Prompt Refinement）」とは何か？',
@@ -288,7 +288,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: '反復的改善は、プロンプトの実行結果を確認し、不足していた指示や不適切な表現を修正しながらプロンプトを徐々に最適化する実践的なアプローチです。',
   },
   {
-    id: 113,
+    id: 3023,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「テンプレート化」のプロンプト運用上のメリットとして正しいものはどれか？',
@@ -301,7 +301,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'プロンプトをテンプレート化することで、チーム間での再利用が容易になり、一貫した出力品質が保たれ、保守・改善の効率も上がります。変数部分（ユーザー名、日付等）をパラメータ化するのが一般的です。',
   },
   {
-    id: 114,
+    id: 3024,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「Multi-Prompt」アプローチの説明として正しいものはどれか？',
@@ -314,7 +314,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'Multi-Promptアプローチは、タスクの種類や複雑さに応じて複数のプロンプトを用意し、ルーティングやチェーンで使い分ける手法です。各プロンプトが単一責任を持つため管理が容易です。',
   },
   {
-    id: 115,
+    id: 3025,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: 'プロンプトの「具体性」と「柔軟性」のバランスについて正しいものはどれか？',
@@ -327,7 +327,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: '要約やデータ抽出等の精度重視タスクでは具体的な指示・制約が重要ですが、ブレインストーミングや創作等の創造性重視タスクでは過度な制約がかえって品質を下げるため、タスクに応じたバランスが重要です。',
   },
   {
-    id: 116,
+    id: 3026,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「A/Bテスト」をプロンプト改善で活用する方法として正しいものはどれか？',
@@ -340,7 +340,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'プロンプトのA/Bテストは、異なるプロンプトバージョンで同一のテストケースを実行し、正確性・一貫性・ユーザー満足度等の指標で客観的に比較・評価する手法です。',
   },
   {
-    id: 117,
+    id: 3027,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「文脈の再読み込み（Context Replenishment）」が必要な場面はどれか？',
@@ -353,7 +353,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: '長い対話では、古い文脈がコンテキストウィンドウの制限で忘却されることがあります。要約生成やベクトル検索で重要な文脈を再読み込みすることで、対話の一貫性を維持します。',
   },
   {
-    id: 118,
+    id: 3028,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「構造化出力（Structured Output）」の実現方法として正しいものはどれか？',
@@ -366,7 +366,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: '構造化出力は、JSONやXML等の特定フォーマットでの出力を要求し、プログラムによる後続処理を可能にする手法です。最近のAPI（OpenAI等）ではFunction CallingやJSON mode等でネイティブにサポートされています。',
   },
   {
-    id: 119,
+    id: 3029,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「推論時サンプリング（Inference-time Sampling）」でTop-p（Nucleus Sampling）を設定する目的は何か？',
@@ -379,7 +379,7 @@ export const promptEngineeringQuestions: Question[] = [
     explanation: 'Top-pサンプリングは、確率が高い順にトークンを累積し、累積確率が閾値p（例：0.9）に達する範囲のトークンの中からサンプリングします。低確率な不適切なトークンを除外しつつ多様性を維持します。',
   },
   {
-    id: 120,
+    id: 3030,
     category: 'prompt_engineering',
     categoryLabel: 'プロンプトエンジニアリング',
     question: '「Self-Criticism（自己批判）」プロンプティングの説明として正しいものはどれか？',
