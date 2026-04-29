@@ -113,6 +113,23 @@ export default function HomePage({
           </button>
 
           <button
+            onClick={() => onNavigate('bookmarks')}
+            className="w-full bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-left hover:scale-[1.02] transition-transform group"
+          >
+            <div className="flex items-center gap-4">
+              <div className="text-3xl">⭐️</div>
+              <div>
+                <h2 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-yellow-500 dark:group-hover:text-yellow-400 transition-colors">
+                  ブックマーク
+                </h2>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  お気に入りの問題を確認
+                </p>
+              </div>
+            </div>
+          </button>
+
+          <button
             onClick={() => onNavigate('terms')}
             className="w-full bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-left hover:scale-[1.02] transition-transform group"
           >

@@ -1,6 +1,7 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import type { Question } from '../core/types';
 import { shuffle } from '../utils/helpers';
+import { isBookmarked, toggleBookmark } from '../utils/storage';
 import QuizCard from '../components/QuizCard';
 import ProgressBar from '../components/ProgressBar';
 
@@ -31,8 +32,20 @@ export default function DrillPlayPage({
   const [answered, setAnswered] = useState(false);
   const [results, setResults] = useState<{ correct: number; total: number } | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
+  const [bookmarked, setBookmarked] = useState(false);
 
   const currentQuestion = shuffled[currentIndex];
+
+  useEffect(() => {
+    if (currentQuestion) {
+      setBookmarked(isBookmarked(currentQuestion.id));
+    }
+  }, [currentIndex, currentQuestion]);
+
+  const handleToggleBookmark = () => {
+    const nowBookmarked = toggleBookmark(currentQuestion.id);
+    setBookmarked(nowBookmarked);
+  };
 
   const handleAnswer = (index: number) => {
     if (answered) return;
@@ -117,9 +130,22 @@ export default function DrillPlayPage({
         >
           ← 分野選択に戻る
         </button>
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
-          {categoryLabel}
-        </h2>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white">
+            {categoryLabel}
+          </h2>
+          <button
+            onClick={handleToggleBookmark}
+            className="text-2xl transition-transform hover:scale-110"
+            title={bookmarked ? 'ブックマーク解除' : 'ブックマーク'}
+          >
+            {bookmarked ? (
+              <span className="text-yellow-400">★</span>
+            ) : (
+              <span className="text-gray-300 dark:text-gray-600">☆</span>
+            )}
+          </button>
+        </div>
         <ProgressBar current={currentIndex + 1} total={shuffled.length} />
         <QuizCard
           question={currentQuestion}

@@ -14,6 +14,7 @@ import ExamResultPage from './pages/ExamResultPage';
 import ExamHistoryPage from './pages/ExamHistoryPage';
 import ReviewPage from './pages/ReviewPage';
 import TermsPage from './pages/TermsPage';
+import BookmarksPage from './pages/BookmarksPage';
 import TextbookSelect from './components/TextbookSelect';
 import TextbookView from './components/TextbookView';
 import textbookAiBasics from './data/textbook-ai-basics.json';
@@ -37,7 +38,8 @@ type Page =
   | 'terms'
   | 'terms-drill'
   | 'textbook-select'
-  | 'textbook-view';
+  | 'textbook-view'
+  | 'bookmarks';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -330,6 +332,10 @@ export default function App() {
           onFinish={handleDrillFinish}
           onBack={() => navigate('review')}
         />
+      )}
+
+      {currentPage === 'bookmarks' && (
+        <BookmarksPage onBack={() => navigate('home')} />
       )}
 
       {currentPage === 'textbook-select' && (
