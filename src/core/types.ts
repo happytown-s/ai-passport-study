@@ -10,6 +10,7 @@ export interface Question {
   question: string;
   options: QuestionOption[];
   explanation: string;
+  keyVocabulary?: Array<{ word: string; meaning: string }>;
 }
 
 export interface AnswerRecord {
