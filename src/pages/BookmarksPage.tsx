@@ -5,9 +5,10 @@ import { getBookmarks, toggleBookmark } from '../utils/storage';
 
 interface Props {
   onBack: () => void;
+  onNavigate: (page: string, options?: Record<string, unknown>) => void;
 }
 
-export default function BookmarksPage({ onBack }: Props) {
+export default function BookmarksPage({ onBack, onNavigate }: Props) {
   const [bookmarkIds, setBookmarkIds] = useState<number[]>([]);
 
   const reload = useCallback(() => {
@@ -57,7 +58,7 @@ export default function BookmarksPage({ onBack }: Props) {
               {bookmarkedQuestions.length}問ブックマーク中
             </p>
             {bookmarkedQuestions.map((q) => (
-              <BookmarkItem key={q.id} question={q} onRemove={handleRemove} />
+              <BookmarkItem key={q.id} question={q} onRemove={handleRemove} onNavigate={onNavigate} />
             ))}
           </div>
         )}
@@ -69,9 +70,11 @@ export default function BookmarksPage({ onBack }: Props) {
 function BookmarkItem({
   question,
   onRemove,
+  onNavigate,
 }: {
   question: Question;
   onRemove: (id: number) => void;
+  onNavigate: (page: string, options?: Record<string, unknown>) => void;
 }) {
   const [expanded, setExpanded] = useState(false);
 
@@ -117,6 +120,30 @@ function BookmarkItem({
           <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
             {question.explanation}
           </p>
+          {question.keyVocabulary && question.keyVocabulary.length > 0 && (
+            <div className="mt-3">
+              <p className="text-xs font-medium text-violet-600 dark:text-violet-400 mb-1.5">
+                📖 単語帳
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {question.keyVocabulary.map((v, i) => (
+                  <button
+                    key={i}
+                    onClick={() => onNavigate('terms', { initialSearch: v.word })}
+                    className="text-xs px-2 py-1 rounded-lg bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 hover:bg-violet-200 dark:hover:bg-violet-900/50 transition-colors"
+                  >
+                    {v.word}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+          <button
+            onClick={() => onNavigate('textbook-select')}
+            className="mt-2 text-xs text-violet-600 dark:text-violet-400 hover:underline"
+          >
+            📚 関連テキストを読む →
+          </button>
         </div>
       )}
     </div>

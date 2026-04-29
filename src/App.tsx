@@ -335,7 +335,12 @@ export default function App() {
       )}
 
       {currentPage === 'bookmarks' && (
-        <BookmarksPage onBack={() => navigate('home')} />
+        <BookmarksPage onBack={() => navigate('home')} onNavigate={(page, options) => {
+          if (page === 'terms' && options?.initialSearch) {
+            setTextbookSearchKeyword(options.initialSearch as string);
+          }
+          navigate(page as Page);
+        }} />
       )}
 
       {currentPage === 'textbook-select' && (
