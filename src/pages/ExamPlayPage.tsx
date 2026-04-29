@@ -140,7 +140,7 @@ export default function ExamPlayPage({ questions, timeLimit, onTimeUp, onSubmit,
           )}
         </div>
 
-        {answeredCount === totalQuestions && (
+        {answeredCount === totalQuestions ? (
           <button
             onClick={handleSubmit}
             className={`mt-4 w-full py-3 rounded-lg text-white font-bold transition-all ${
@@ -150,6 +150,17 @@ export default function ExamPlayPage({ questions, timeLimit, onTimeUp, onSubmit,
             }`}
           >
             {confirmedSubmit ? '本当に提出しますか？（もう一度クリック）' : '提出する'}
+          </button>
+        ) : (
+          <button
+            onClick={() => setConfirmedSubmit(true)}
+            className={`mt-4 w-full py-3 rounded-lg text-white font-bold transition-all ${
+              confirmedSubmit
+                ? 'bg-red-500 hover:bg-red-600'
+                : 'bg-gradient-to-r from-amber-500 to-orange-500 hover:scale-[1.02]'
+            }`}
+          >
+            {confirmedSubmit ? '未回答の問題がありますが提出しますか？（もう一度クリック）' : `提出する（未回答 ${totalQuestions - answeredCount} 問）`}
           </button>
         )}
       </div>
