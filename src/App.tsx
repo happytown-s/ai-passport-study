@@ -339,6 +339,9 @@ export default function App() {
           if (page === 'terms' && options?.initialSearch) {
             setTextbookSearchKeyword(options.initialSearch as string);
           }
+          if (page === 'textbook-view' && options?.category) {
+            setTextbookCategory(options.category as string);
+          }
           navigate(page as Page);
         }} />
       )}

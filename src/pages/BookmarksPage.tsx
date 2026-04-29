@@ -126,7 +126,7 @@ function BookmarkItem({
                 📖 単語帳
               </p>
               <div className="flex flex-wrap gap-1.5">
-                {question.keyVocabulary.map((v, i) => (
+                {question.keyVocabulary.map((v: { word: string; meaning: string }, i: number) => (
                   <button
                     key={i}
                     onClick={() => onNavigate('terms', { initialSearch: v.word })}
@@ -139,10 +139,10 @@ function BookmarkItem({
             </div>
           )}
           <button
-            onClick={() => onNavigate('textbook-select')}
+            onClick={() => onNavigate('textbook-view', { category: question.category })}
             className="mt-2 text-xs text-violet-600 dark:text-violet-400 hover:underline"
           >
-            📚 関連テキストを読む →
+            📚 {question.categoryLabel}のテキストを読む →
           </button>
         </div>
       )}
