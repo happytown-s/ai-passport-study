@@ -13,8 +13,7 @@ interface TextbookTopic {
   howTo: (HowToStep | string)[];
   keywords: string[];
   examTip: string;
-  illustration?: string;
-}
+  illustration?: string;}
 
 interface TextbookViewProps {
   topics: TextbookTopic[];

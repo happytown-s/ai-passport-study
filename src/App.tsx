@@ -48,7 +48,7 @@ export default function App() {
   const [textbookQuestionIds, setTextbookQuestionIds] = useState<number[]>([]);
   const [textbookSearchKeyword, setTextbookSearchKeyword] = useState<string>('');
 
-  const textbookMap: Record<string, { title: string; topics: typeof textbookAiBasics }> = {
+  const textbookMap: Record<string, { title: string; topics: Array<{ topicId: string; title: string; summary: string; howTo: { step: string; detail: string }[]; keywords: string[]; examTip: string; illustration?: string }> }> = {
     ai_basics: { title: 'AI基礎知識', topics: textbookAiBasics },
     ml_basics: { title: '機械学習基礎', topics: textbookMlBasics },
     generative_ai: { title: '生成AIの仕組み', topics: textbookGenerativeAi },
