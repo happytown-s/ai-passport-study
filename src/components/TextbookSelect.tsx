@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+
 interface TextbookSelectProps {
   onSelect: (categoryId: string) => void;
   onBack: () => void;
@@ -14,8 +16,28 @@ const categories = [
 ];
 
 export default function TextbookSelect({ onSelect, onBack }: TextbookSelectProps) {
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStartRef.current) return;
+    const dx = e.changedTouches[0].clientX - touchStartRef.current.x;
+    const dy = e.changedTouches[0].clientY - touchStartRef.current.y;
+    touchStartRef.current = null;
+    if (Math.abs(dx) > 80 && Math.abs(dx) > Math.abs(dy) * 1.5 && dx > 0) {
+      onBack();
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div
+      className="min-h-screen bg-gray-50 dark:bg-gray-900"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="sticky top-0 z-10 bg-white dark:bg-gray-800 shadow-sm">
         <div className="max-w-2xl mx-auto px-4 py-3 flex items-center gap-3">
           <button
