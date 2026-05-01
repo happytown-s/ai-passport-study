@@ -5,12 +5,12 @@ interface TextbookSelectProps {
 
 const categories = [
   { id: 'ai_basics', name: 'AI基礎知識', icon: '[AI]', count: 14, color: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300' },
-  { id: 'ml_basics', name: '機械学習基礎', icon: '[ML]', count: 0, color: 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300' },
-  { id: 'generative_ai', name: '生成AIの仕組み', icon: '[GA]', count: 0, color: 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300' },
-  { id: 'prompt_engineering', name: 'プロンプトエンジニアリング', icon: '[PE]', count: 0, color: 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300' },
-  { id: 'ai_risks', name: 'AIのリスク・倫理', icon: '[RS]', count: 0, color: 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300' },
-  { id: 'legal', name: '著作権・法規制', icon: '[LG]', count: 0, color: 'bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300' },
-  { id: 'business', name: 'ビジネス活用', icon: '[BS]', count: 0, color: 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300' },
+  { id: 'ml_basics', name: '機械学習基礎', icon: '[ML]', count: 10, color: 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300' },
+  { id: 'generative_ai', name: '生成AIの仕組み', icon: '[GA]', count: 15, color: 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300' },
+  { id: 'prompt_engineering', name: 'プロンプトエンジニアリング', icon: '[PE]', count: 10, color: 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300' },
+  { id: 'ai_risks', name: 'AIのリスク・倫理', icon: '[RS]', count: 13, color: 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300' },
+  { id: 'legal', name: '著作権・法規制', icon: '[LG]', count: 13, color: 'bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300' },
+  { id: 'business', name: 'ビジネス活用', icon: '[BS]', count: 12, color: 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300' },
 ];
 
 export default function TextbookSelect({ onSelect, onBack }: TextbookSelectProps) {
