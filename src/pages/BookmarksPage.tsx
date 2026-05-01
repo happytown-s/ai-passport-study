@@ -78,7 +78,6 @@ function BookmarkItem({
 }) {
   const [expanded, setExpanded] = useState(false);
 
-  const correctOption = question.options.find((o) => o.correct);
   const truncatedQuestion =
     question.question.length > 60
       ? question.question.slice(0, 60) + '…'
@@ -113,10 +112,22 @@ function BookmarkItem({
 
       {expanded && (
         <div className="mt-3 pl-8 border-l-2 border-violet-200 dark:border-violet-700 space-y-2">
-          <p className="text-sm text-gray-900 dark:text-white">
-            <span className="font-medium text-green-600 dark:text-green-400">正解:</span>{' '}
-            {correctOption?.text}
-          </p>
+          <div className="space-y-1">
+            {question.options.map((opt, i) => (
+              <p
+                key={i}
+                className={`text-sm ${
+                  opt.correct
+                    ? 'text-green-700 dark:text-green-400 font-medium'
+                    : 'text-gray-600 dark:text-gray-400'
+                }`
+              }
+              >
+                {String.fromCharCode(65 + i)}. {opt.text}
+                {opt.correct && ' ✓'}
+              </p>
+            ))}
+          </div>
           <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
             {question.explanation}
           </p>

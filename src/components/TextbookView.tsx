@@ -13,6 +13,7 @@ interface TextbookTopic {
   howTo: (HowToStep | string)[];
   keywords: string[];
   examTip: string;
+  illustration?: string;
 }
 
 interface TextbookViewProps {
@@ -243,6 +244,16 @@ function TopicCard({
       </div>
       {isExpanded && (
         <div className="px-4 pb-4 border-t border-gray-100 dark:border-gray-700">
+          {topic.illustration && (
+            <div className="mt-3 rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-700">
+              <img
+                src={topic.illustration}
+                alt={topic.title}
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+          )}
           <TopicDetailContent topic={topic} onSearchKeyword={onSearchKeyword} />
           {questionCount > 0 && (
             <button
@@ -293,6 +304,16 @@ function TopicDetail({
       <h2 className="text-xl font-bold text-gray-900 dark:text-white">
         {topic.title}
       </h2>
+      {topic.illustration && (
+        <div className="rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-700">
+          <img
+            src={topic.illustration}
+            alt={topic.title}
+            className="w-full h-auto"
+            loading="lazy"
+          />
+        </div>
+      )}
       <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
         {topic.summary}
       </p>
