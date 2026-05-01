@@ -318,6 +318,7 @@
   {
     "topicId": "ab-13",
     "title": "AIの能力レベル分類",
+    "illustration": "/illustrations/ai-capability-levels.jpg",
     "summary": "AIは能力レベルによって3つの段階に分類される。ANI（特化型AI: Artificial Narrow Intelligence）は特定のタスクに特化したAIで、現在実用化されているすべてのAI（画像認識、翻訳、対話AIなど）はこれに該当する。AGI（汎用型AI: Artificial General Intelligence）は人間と同等の汎用的な知能を持つ仮説上のAIで、現在は未実現である。ASI（人工超知能: Artificial Superintelligence）は人間の知能をあらゆる領域で遥かに超える仮説上のAIである。AGIの実現後、AIが自己強化的な進歩を続ければASIに到達すると考えられている。",
     "howTo": [
       {
