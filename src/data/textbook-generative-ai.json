@@ -262,6 +262,7 @@
   {
     "topicId": "ga-11",
     "title": "最新の生成AIモデル（2025-2026）",
+    "illustration": "/illustrations/latest-gen-ai-models.jpg",
     "summary": "2025年から2026年にかけて、生成AIモデルは急速に進化し、各社から多様なモデルが登場している。OpenAIからはGPT-o1、o3、o4の推論特化モデルに加え、GPT-4.1、GPT-5がリリースされ、さらにOperator（自律型AIエージェント）、Codex（コーディング特化）、Image Generation（画像生成）など用途別モデルが展開されている。GoogleのGeminiはテキスト・画像・音声・動画を統合処理するマルチモーダルAIとして機能を拡張し続けている。AnthropicのClaudeは安全性と精度を重視した設計で評価を高めている。MicrosoftのCopilotはOffice製品群にAI機能を統合し、ビジネス現場での利用を推進している。各モデルは得意分野が異なり、用途に応じて適切に選択することが求められる。",
     "howTo": [
       {
