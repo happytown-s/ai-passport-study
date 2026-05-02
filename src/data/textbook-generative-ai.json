@@ -80,6 +80,7 @@
   {
     "topicId": "ga-04",
     "title": "アテンション機構",
+    "illustration": "/illustrations/attention-mechanism.jpg",
     "summary": "アテンション機構は、入力データの中で現在処理している部分と関連性の高い部分に重点を置いて情報を集約する手法である。Self-Attentionは、同じ入力系列内の要素同士の関連性を計算し、文脈を考慮した表現を獲得する。Query、Key、Valueの3つのベクトルを用いて関連性の重みを計算する。この機構により、AIは長い文脈の中で重要な情報に「注意」を向けることができる。",
     "howTo": [
       {
