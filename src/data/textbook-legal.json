@@ -409,6 +409,7 @@
   {
     "topicId": "lg-13",
     "title": "知的財産権の基礎",
+    "illustration": "/illustrations/intellectual-property-basics.jpg",
     "summary": "知的財産権には特許権、商標権、意匠権、著作権が含まれる。ブロックチェーンは技術仕組みであり知的財産権ではない。AIの生成物の著作権は現在議論中で、日本では人間の創作的寄与がなければ著作物性が認められない場合がある。",
     "howTo": [
       {
