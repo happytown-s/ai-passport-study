@@ -132,6 +132,7 @@
   {
     "topicId": "ga-06",
     "title": "ファインチューニング",
+    "illustration": "/illustrations/fine-tuning.jpg",
     "summary": "ファインチューニングは、事前学習済みのモデルを特定のタスクや用途に合わせて追加学習させる技術である。汎用的な言語モデルを、医療、法律、カスタマーサポートなどの専門分野に適応させることができる。少ない追加データで効率的にモデルを最適化できるため、実務で広く活用されている。PEFT（Parameter-Efficient Fine-Tuning）などの効率的な手法も開発されている。",
     "howTo": [
       {
