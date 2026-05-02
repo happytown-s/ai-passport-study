@@ -288,6 +288,7 @@
   {
     "topicId": "ga-13",
     "title": "画像認識モデル（CNN）と生成モデル",
+    "illustration": "/illustrations/cnn-and-generative-models.jpg",
     "summary": "CNN（畳み込みニューラルネットワーク）は画像から局所的な特徴を抽出する深層学習モデル。畳み込み層が画像認識の中核を担う。GAN（敵対的生成ネットワーク）はGeneratorとDiscriminatorの2つのネットワークを敵対的に訓練してデータを生成するモデル。VAE（変分自己符号化器）は潜在変数を用いてデータの圧縮と復元を行う。Diffusionモデルはノイズを段階的に除去して画像を生成し、現在の画像生成AIの主流となっている。",
     "howTo": [
       {
