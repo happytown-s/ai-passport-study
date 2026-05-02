@@ -340,6 +340,7 @@
   {
     "topicId": "ga-15",
     "title": "UL2Rと過学習対策",
+    "illustration": "/illustrations/ul2r-overfitting.jpg",
     "summary": "UL2R（Unifying Language Learning Paradigm）はBERTとGPTの構造を融合し、文生成と文分類を統一的に扱う言語学習パラダイム。音声認証用ではない。過学習対策として正則化と早期終了（Early Stopping）がある。正則化はモデルの複雑さにペナルティを与えて過学習を防ぎ、早期終了は検証データの精度が向上しなくなった時点で訓練を停止する。",
     "howTo": [
       {
