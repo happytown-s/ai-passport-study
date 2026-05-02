@@ -366,6 +366,7 @@
   {
     "topicId": "ga-16",
     "title": "GPTシリーズの進化系譜",
+    "illustration": "/illustrations/gpt-evolution.jpg",
     "summary": "OpenAIのGPT（Generative Pre-trained Transformer）シリーズは、2018年のGPT-1から現在のGPT-5に至るまで、大規模言語モデルの進化を牽引してきた。2018年6月にGPT-1が自然な文章生成を実現し、2019年のGPT-2でパラメーター数を大幅に拡大。2020年のGPT-3で商業利用が始まり、2022年のGPT-3.5を基にChatGPTサービスが開始された。2023年のGPT-4で論理能力が飛躍的に向上。その後、2つの系統に分岐：対話系統（GPT-4o→GPT-4.1→GPT-5）と推論特化系統（GPT-o1→GPT-o3→GPT-o4-mini）。GPT-4o（2024年5月）は高速化・軽量化、GPT-o1（2024年9月）はChain of Thought（CoT）による思考特化、GPT-o3とGPT-o4-mini（2025年4月）は推論能力とコスト効率の最適化、GPT-4.1（2025年4月）は高性能マルチモーダル、GPT-5（2025年8月）はチャットと推論機能を統合した次世代モデル。関連技術として、Operator（自律型AIエージェント）、Codex（自然言語→コード変換）、Image Generation（GPT-4にネイティブ統合された画像生成）がある。",
     "howTo": [
       {
