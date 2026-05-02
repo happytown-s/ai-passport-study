@@ -210,6 +210,7 @@
   {
     "topicId": "ga-09",
     "title": "拡散モデル",
+    "illustration": "/illustrations/diffusion-model.jpg",
     "summary": "拡散モデルは、データに徐々にノイズを加えて破壊し、その逆過程を学習することで新たなデータを生成する確率的生成モデルである。画像生成AI（Stable Diffusion、DALL-E、Midjourneyなど）の基盤技術として革命的な進歩をもたらした。DDPM（Denoising Diffusion Probabilistic Models）が代表的なアルゴリズムである。テキストから画像への生成（Text-to-Image）で特に高い品質を実現している。",
     "howTo": [
       {
