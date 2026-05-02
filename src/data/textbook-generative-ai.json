@@ -314,6 +314,7 @@
   {
     "topicId": "ga-14",
     "title": "RLHFと位置エンコーディング",
+    "illustration": "/illustrations/rlhf-position-encoding.jpg",
     "summary": "RLHF（Reinforcement Learning from Human Feedback）は、人間の選好を学習した報酬モデルでAIを訓練する手法。ChatGPTの訓練に使用された。手順は：人間がAIの出力を評価・順位付け→報酬モデルを構築→強化学習で応答を最適化。位置エンコーディングはTransformerでトークン間の順序情報を保持する仕組み。Self-Attentionではスケーリングが勾配消失を防止する重要な役割を果たす。Multi-Modalモデルはテキスト・画像・音声など複数種類のデータを統合処理するAIモデル（GPT-4Vなど）。",
     "howTo": [
       {
