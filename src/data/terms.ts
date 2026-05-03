@@ -107,7 +107,7 @@ export const terms: Term[] = [
   { id: 84, term: 'G7広島AIプロセス', reading: 'じーせぶんひろしまえーあいぷろせす', category: 'legal', categoryLabel: '著作権・法規制', definition: '2023年G7広島サミットで合意されたAIガバナンスの国際原則。信頼できるAIの普及に向けた11原則。', relatedTermIds: [80], relatedQuestionIds: [173] },
   { id: 85, term: 'GDPR', reading: 'じーでぃぴーあーる', category: 'legal', categoryLabel: '著作権・法規制', definition: 'EUの一般データ保護規則。個人データの取り扱いを厳格に規制。AIの学習データにも適用。', relatedTermIds: [79, 81], relatedQuestionIds: [168] },
   { id: 86, term: 'AI倫理指針', reading: 'えーあいりんりしじゅん', category: 'legal', categoryLabel: '著作権・法規制', definition: 'AIの開発・利用に関する倫理原則。透明性、公平性、責任、プライバシー等を含む。各国・機関が独自指針を策定。', relatedTermIds: [80, 74], relatedQuestionIds: [130] },
-  { id: 87, term: '深い偽物規制法', reading: 'ふかいにせものきせいほう', category: 'legal', categoryLabel: '著作権・法規制', definition: 'ディープフェイクによる被害を防ぐための法規制。中国や一部諸国で既に法制化。日本でも検討中。', relatedTermIds: [64, 79], relatedQuestionIds: [167] },
+  { id: 87, term: 'ディープフェイク規制法', reading: 'でぃーぷふぇいくきせいほう', category: 'legal', categoryLabel: '著作権・法規制', definition: 'ディープフェイクによる被害を防ぐための法規制。中国や一部諸国で既に法制化。日本でも検討中。', relatedTermIds: [64, 79], relatedQuestionIds: [167] },
   { id: 88, term: '暗号資産・NFTとAI', reading: 'あんごうしさんえぬえふてぃーとえーあい', category: 'legal', categoryLabel: '著作権・法規制', definition: 'AI生成物のNFT化に関する法規制。AI生成物に著作性が認められるか、所有権の帰属等が議論の的。', relatedTermIds: [151, 31], relatedQuestionIds: [163] },
   { id: 89, term: '知的財産権', reading: 'ちてきざいさんけん', category: 'legal', categoryLabel: '著作権・法規制', definition: '特許、商標、著作権等の権利の総称。AI生成物の著作権帰属は未解決の法課題。', relatedTermIds: [151, 88], relatedQuestionIds: [162] },
   { id: 90, term: '日本AI戦略', reading: 'にほんえーあいせんりゃく', category: 'legal', categoryLabel: '著作権・法規制', definition: '日本政府のAI戦略。AI技術の研究開発推進と社会実装を両立。人材育成と国際協調を重視。', relatedTermIds: [80], relatedQuestionIds: [172] },
