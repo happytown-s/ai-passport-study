@@ -4,8 +4,7 @@ import SettingsButton from '../components/SettingsButton';
 
 interface Props {
   onNavigate: (page: string) => void;
-  darkMode: boolean;
-  onToggleDarkMode: () => void;
+
   answerHistory: { questionId: number; isCorrect: boolean; timestamp: number }[];
   examScores: { totalQuestions: number; correctCount: number; date: string; timeSpent: number }[];
   streak: number;
@@ -15,8 +14,6 @@ interface Props {
 
 export default function HomePage({
   onNavigate,
-  darkMode,
-  onToggleDarkMode,
   answerHistory,
   examScores,
   streak,

@@ -207,8 +207,6 @@ export default function App() {
       {currentPage === 'home' && (
         <HomePage
           onNavigate={navigate}
-          darkMode={darkMode}
-          onToggleDarkMode={toggleDarkMode}
           answerHistory={answerHistory}
           examScores={examScores}
           streak={streak}

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import type { QuizConfig } from '../core/types';
 
 interface Props {

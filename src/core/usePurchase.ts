@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback } from 'react';
 
 export function usePurchase() {
   const [isPremium, setIsPremium] = useState<boolean>(() => {
