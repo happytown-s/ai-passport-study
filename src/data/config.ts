@@ -1,5 +1,7 @@
 import type { QuizConfig } from '../core/types';
 
+export const freeCategoryIds = ['ai_basics', 'generative_ai'];
+
 export const quizConfig: QuizConfig = {
   id: 'ai-passport',
   title: '生成AIパスポート',

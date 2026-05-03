@@ -1,8 +1,9 @@
 import { useState, useCallback, useMemo } from 'react';
 import type { Question, ExamScore } from './core/types';
 import { allQuestions } from './data/questions';
-import { quizConfig } from './data/config';
+import { quizConfig, freeCategoryIds } from './data/config';
 import { useStorage } from './core/useStorage';
+import { usePurchase } from './core/usePurchase';
 import { pickFromCategories, shuffle } from './utils/helpers';
 
 import HomePage from './pages/HomePage';
@@ -15,6 +16,8 @@ import ExamHistoryPage from './pages/ExamHistoryPage';
 import ReviewPage from './pages/ReviewPage';
 import TermsPage from './pages/TermsPage';
 import BookmarksPage from './pages/BookmarksPage';
+import SettingsPage from './pages/SettingsPage';
+import SettingsButton from './components/SettingsButton';
 import TextbookSelect from './components/TextbookSelect';
 import TextbookView from './components/TextbookView';
 import textbookAiBasics from './data/textbook-ai-basics.json';
@@ -39,7 +42,8 @@ type Page =
   | 'terms-drill'
   | 'textbook-select'
   | 'textbook-view'
-  | 'bookmarks';
+  | 'bookmarks'
+  | 'settings';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -76,6 +80,15 @@ export default function App() {
     clearHistory,
   } = useStorage();
 
+  const {
+    isPremium,
+    isDevMode,
+    isUnlocked,
+    setDevMode,
+    purchasePremium,
+    restorePurchase,
+  } = usePurchase();
+
   const wrongCount = useMemo(() => {
     return getWrongQuestions().length;
   }, [getWrongQuestions]);
@@ -84,6 +97,10 @@ export default function App() {
     setCurrentPage(page as Page);
     window.scrollTo(0, 0);
   }, []);
+
+  const openSettings = useCallback(() => {
+    navigate('settings');
+  }, [navigate]);
 
   const drillQuestions = useMemo(() => {
     if (textbookQuestionIds.length > 0) {
@@ -180,8 +197,13 @@ export default function App() {
     [handleExamFinish],
   );
 
+  // Pages that show SettingsButton in the top-right (all except home and settings)
+  const showSettingsButton = currentPage !== 'home' && currentPage !== 'settings';
+
   return (
     <div className={darkMode ? 'dark' : ''}>
+      {showSettingsButton && <SettingsButton onClick={openSettings} />}
+
       {currentPage === 'home' && (
         <HomePage
           onNavigate={navigate}
@@ -191,6 +213,7 @@ export default function App() {
           examScores={examScores}
           streak={streak}
           wrongCount={wrongCount}
+          onOpenSettings={openSettings}
         />
       )}
 
@@ -200,6 +223,10 @@ export default function App() {
           answerHistory={answerHistory}
           onSelectCategory={handleSelectCategory}
           onBack={() => navigate('home')}
+          isPremium={isPremium}
+          isDevMode={isDevMode}
+          freeCategoryIds={freeCategoryIds}
+          onOpenSettings={openSettings}
         />
       )}
 
@@ -231,6 +258,9 @@ export default function App() {
           config={quizConfig}
           onStart={handleStartExam}
           onBack={() => navigate('home')}
+          isPremium={isPremium}
+          isDevMode={isDevMode}
+          onOpenSettings={openSettings}
         />
       )}
 
@@ -353,6 +383,10 @@ export default function App() {
             navigate('textbook-view');
           }}
           onBack={() => navigate('home')}
+          isPremium={isPremium}
+          isDevMode={isDevMode}
+          freeCategoryIds={freeCategoryIds}
+          onOpenSettings={openSettings}
         />
       )}
 
@@ -371,6 +405,20 @@ export default function App() {
             setTextbookSearchKeyword(keyword);
             navigate('terms');
           }}
+        />
+      )}
+
+      {currentPage === 'settings' && (
+        <SettingsPage
+          darkMode={darkMode}
+          onToggleDarkMode={toggleDarkMode}
+          isPremium={isPremium}
+          isDevMode={isDevMode}
+          isUnlocked={isUnlocked}
+          setDevMode={setDevMode}
+          purchasePremium={purchasePremium}
+          restorePurchase={restorePurchase}
+          onBack={() => navigate('home')}
         />
       )}
     </div>

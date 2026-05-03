@@ -1,8 +1,12 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 interface TextbookSelectProps {
   onSelect: (categoryId: string) => void;
   onBack: () => void;
+  isPremium: boolean;
+  isDevMode: boolean;
+  freeCategoryIds: string[];
+  onOpenSettings: () => void;
 }
 
 const categories = [
@@ -15,8 +19,23 @@ const categories = [
   { id: 'business', name: 'ビジネス活用', icon: '[BS]', count: 12, color: 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300' },
 ];
 
-export default function TextbookSelect({ onSelect, onBack }: TextbookSelectProps) {
+export default function TextbookSelect({ onSelect, onBack, isPremium, isDevMode, freeCategoryIds, onOpenSettings }: TextbookSelectProps) {
   const touchStartRef = useRef<{ x: number; y: number } | null>(null);
+  const [showModal, setShowModal] = useState(false);
+  const isUnlocked = isPremium || isDevMode;
+
+  const isLocked = (catId: string) => {
+    if (isUnlocked) return false;
+    return !freeCategoryIds.includes(catId);
+  };
+
+  const handleClick = (catId: string) => {
+    if (isLocked(catId)) {
+      setShowModal(true);
+      return;
+    }
+    onSelect(catId);
+  };
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
@@ -59,32 +78,70 @@ export default function TextbookSelect({ onSelect, onBack }: TextbookSelectProps
         </p>
 
         <div className="grid grid-cols-1 gap-3">
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => onSelect(cat.id)}
-              className="flex items-center gap-3 p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-600 transition-all text-left"
-            >
-              <span
-                className={`w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold ${cat.color}`}
+          {categories.map((cat) => {
+            const locked = isLocked(cat.id);
+            return (
+              <button
+                key={cat.id}
+                onClick={() => handleClick(cat.id)}
+                className={`flex items-center gap-3 p-4 bg-white dark:bg-gray-800 rounded-xl border transition-all text-left ${
+                  locked
+                    ? 'border-gray-200 dark:border-gray-700 opacity-70'
+                    : 'border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-600'
+                }`}
               >
-                {cat.icon}
-              </span>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
-                  {cat.name}
-                </h3>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                  {cat.count} トピック
-                </p>
-              </div>
-              <span className="text-gray-300 dark:text-gray-600">
-                &gt;
-              </span>
-            </button>
-          ))}
+                <span
+                  className={`w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold ${cat.color}`}
+                >
+                  {locked ? '🔒' : cat.icon}
+                </span>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
+                    {cat.name}
+                  </h3>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    {cat.count} トピック{locked ? ' • 有料会員限定' : ''}
+                  </p>
+                </div>
+                <span className="text-gray-300 dark:text-gray-600">
+                  &gt;
+                </span>
+              </button>
+            );
+          })}
         </div>
       </div>
+
+      {/* Lock Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 mx-4 max-w-sm w-full">
+            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2 text-center">
+              🔒 有料会員が必要です
+            </h2>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-6 text-center">
+              このテキストを利用するには有料会員への登録が必要です。
+            </p>
+            <div className="space-y-3">
+              <button
+                onClick={() => {
+                  setShowModal(false);
+                  onOpenSettings();
+                }}
+                className="w-full py-3 rounded-lg bg-gradient-to-r from-violet-500 to-indigo-500 text-white font-bold hover:scale-[1.02] transition-transform"
+              >
+                👑 有料会員になる
+              </button>
+              <button
+                onClick={() => setShowModal(false)}
+                className="w-full py-3 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              >
+                閉じる
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

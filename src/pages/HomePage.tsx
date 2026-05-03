@@ -1,6 +1,6 @@
 import { quizConfig } from '../data/config';
 import StatsSummary from '../components/StatsSummary';
-import DarkModeToggle from '../components/DarkModeToggle';
+import SettingsButton from '../components/SettingsButton';
 
 interface Props {
   onNavigate: (page: string) => void;
@@ -10,6 +10,7 @@ interface Props {
   examScores: { totalQuestions: number; correctCount: number; date: string; timeSpent: number }[];
   streak: number;
   wrongCount: number;
+  onOpenSettings: () => void;
 }
 
 export default function HomePage({
@@ -20,10 +21,11 @@ export default function HomePage({
   examScores,
   streak,
   wrongCount,
+  onOpenSettings,
 }: Props) {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
-      <DarkModeToggle darkMode={darkMode} onToggleDarkMode={onToggleDarkMode} />
+      <SettingsButton onClick={onOpenSettings} />
       <div className="max-w-2xl mx-auto px-4 py-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">

@@ -1,13 +1,18 @@
+import { useState } from 'react';
 import type { QuizConfig } from '../core/types';
 
 interface Props {
   config: QuizConfig;
   onStart: () => void;
   onBack: () => void;
+  isPremium: boolean;
+  isDevMode: boolean;
+  onOpenSettings: () => void;
 }
 
-export default function ExamPage({ config, onStart, onBack }: Props) {
+export default function ExamPage({ config, onStart, onBack, isPremium, isDevMode, onOpenSettings }: Props) {
   const passCount = Math.ceil(config.examQuestions * config.passLine / 100);
+  const isUnlocked = isPremium || isDevMode;
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
@@ -52,12 +57,21 @@ export default function ExamPage({ config, onStart, onBack }: Props) {
               </div>
             </div>
           </div>
-          <button
-            onClick={onStart}
-            className="w-full py-4 rounded-lg bg-gradient-to-r from-violet-500 to-indigo-500 text-white text-lg font-bold hover:scale-[1.02] transition-transform"
-          >
-            模試を開始する
-          </button>
+          {isUnlocked ? (
+            <button
+              onClick={onStart}
+              className="w-full py-4 rounded-lg bg-gradient-to-r from-violet-500 to-indigo-500 text-white text-lg font-bold hover:scale-[1.02] transition-transform"
+            >
+              模試を開始する
+            </button>
+          ) : (
+            <button
+              onClick={onOpenSettings}
+              className="w-full py-4 rounded-lg bg-gradient-to-r from-amber-500 to-orange-500 text-white text-lg font-bold hover:scale-[1.02] transition-transform"
+            >
+              👑 有料会員で模試に挑戦
+            </button>
+          )}
         </div>
       </div>
     </div>
