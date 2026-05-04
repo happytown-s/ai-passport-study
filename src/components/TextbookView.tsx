@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef } from 'react';
+import { useState, useMemo, useRef, useCallback, useEffect } from 'react';
 import textbookQuestionMap from '../data/textbook-question-map.json';
 
 interface HowToStep {
@@ -49,6 +49,32 @@ export default function TextbookView({ topics, title, category, onBack, onPracti
   const topicQCount = (tid: string) => (qMap[tid] || []).length;
 
   const touchStartRef = useRef<{ x: number; y: number } | null>(null);
+  const expandedCardRef = useRef<HTMLDivElement>(null);
+  const prevExpandedRef = useRef<string | null>(null);
+  const [justCollapsedId, setJustCollapsedId] = useState<string | null>(null);
+
+  // When collapsing from expanded detail view, scroll the topic card into view
+  const collapseExpanded = useCallback(() => {
+    if (expandedId) {
+      prevExpandedRef.current = expandedId;
+      setExpandedId(null);
+      setJustCollapsedId(expandedId);
+    }
+  }, [expandedId]);
+
+  // After render, if we just collapsed, scroll the card into view
+  useEffect(() => {
+    if (justCollapsedId && !expandedId) {
+      const el = expandedCardRef.current;
+      if (el) {
+        requestAnimationFrame(() => {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+      setJustCollapsedId(null);
+      prevExpandedRef.current = null;
+    }
+  }, [justCollapsedId, expandedId]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
@@ -60,7 +86,12 @@ export default function TextbookView({ topics, title, category, onBack, onPracti
     const dy = e.changedTouches[0].clientY - touchStartRef.current.y;
     touchStartRef.current = null;
     if (Math.abs(dx) > 80 && Math.abs(dx) > Math.abs(dy) * 1.5 && dx > 0) {
-      onBack();
+      // Expanded topic → collapse first (don't leave the page)
+      if (expandedId) {
+        collapseExpanded();
+      } else {
+        onBack();
+      }
     }
   };
 
@@ -136,6 +167,7 @@ export default function TextbookView({ topics, title, category, onBack, onPracti
                     if (ids.length > 0) onPractice(ids);
                   }}
                   onSearchKeyword={onSearchKeyword}
+                  scrollRef={justCollapsedId === topic.topicId ? expandedCardRef : undefined}
                 />
               ))
             )}
@@ -172,7 +204,7 @@ export default function TextbookView({ topics, title, category, onBack, onPracti
               <TopicDetail
                 topic={topics.find((t) => t.topicId === expandedId)!}
                 questionCount={topicQCount(expandedId)}
-                onCollapse={() => setExpandedId(null)}
+                onCollapse={collapseExpanded}
                 onPractice={() => {
                   const ids = qMap[expandedId] || [];
                   if (ids.length > 0) onPractice(ids);
@@ -192,6 +224,7 @@ export default function TextbookView({ topics, title, category, onBack, onPracti
                     if (ids.length > 0) onPractice(ids);
                   }}
                   onSearchKeyword={onSearchKeyword}
+                  scrollRef={justCollapsedId === topic.topicId ? expandedCardRef : undefined}
                 />
               ))
             )}
@@ -209,6 +242,7 @@ function TopicCard({
   onToggle,
   onPractice,
   onSearchKeyword,
+  scrollRef,
 }: {
   topic: TextbookTopic;
   isExpanded: boolean;
@@ -216,9 +250,10 @@ function TopicCard({
   onToggle: () => void;
   onPractice: () => void;
   onSearchKeyword: (keyword: string) => void;
+  scrollRef?: React.RefObject<HTMLDivElement | null>;
 }) {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow">
+    <div ref={scrollRef} className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow">
       <div className="px-4 py-3 cursor-pointer" onClick={onToggle}>
         <div className="flex items-start justify-between gap-2">
           <div className="flex-1 min-w-0">
